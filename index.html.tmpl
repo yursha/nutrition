@@ -1,0 +1,171 @@
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: fixed;
+    }
+    table, th, td {
+      border: 1px solid lightgray;
+    }
+    th, td {
+      height: 2rem;
+      padding: 0 0.5rem;
+      white-space: nowrap;
+      overflow: scroll;
+    }
+    th {
+      background-color: beige;
+    }
+    #page_controls > button {
+      margin: 1rem;
+      padding: 0.5rem 1.5rem;
+    }
+  </style>
+  <script>
+    window.data = {{data}}
+    window.pageIndex = 0
+    window.pageSize = 20
+    window.food_categories = {
+      '1': 'Dairy & Eggs',
+      '2': 'Herbs',
+      '9': 'Fruits',
+      '11': 'Veggies',
+      '12': 'Seeds',
+      '15': 'Fish',
+      '16': 'Legumes',
+      '20': 'Grains'
+    }
+
+    function configureCategoriesSelector() {
+      const categories_selector = document.getElementById("categories_selector")
+      const category_ids = new Set()
+      const categories = []
+      for (let row of window.data) {
+        const id = row[1]
+        if (category_ids.has(id)) continue
+        category_ids.add(id)
+        categories.push({ id, name: window.food_categories[id]})
+      }
+
+      for (let category of categories) {
+        let label = document.createElement("label")
+
+        let input = document.createElement("input")
+        input.type = "checkbox"
+        input.id = category.id
+        input.addEventListener("change", event => {
+          rerender()
+        })
+        label.appendChild(input)
+
+        let text = document.createTextNode(category.name)
+        label.appendChild(text)
+
+        categories_selector.appendChild(label)
+      }
+    }
+
+    function configureDataTable() {
+      const food_categories = document.getElementById("categories_selector")
+      const selectors = food_categories.getElementsByTagName("input")
+      let desired_categories = []
+      for (let selector of selectors) {
+        if (selector.checked) {
+          desired_categories.push(selector.id)
+        }
+      }
+
+      const data_table = document.getElementById("data_table")
+
+      // Remove all rows except for the heading
+      for (let tbody of data_table.tBodies) {
+        data_table.removeChild(tbody)
+      }
+      let tbody = data_table.createTBody()
+
+      const filteredData = window.data.filter(row => {
+        return desired_categories.includes(row[1])
+      })
+
+      for (let [j, row] of filteredData.entries()) {
+        if (j < pageIndex * pageSize) continue;
+        if (j === (pageIndex + 1) * pageSize) break;
+
+        let tr = document.createElement("tr")
+        for (let [i, col] of row.entries()) {
+          if ([1, 2].includes(i)) continue
+          let td = document.createElement("td")
+          td.innerText = col
+          tr.appendChild(td)
+
+          if (i == 4) {
+            td.style.textAlign = 'center'
+          } else if (i == 5) {
+            td.style.textAlign = 'right'
+          }
+        }
+        tbody.appendChild(tr)
+      }
+    }
+
+    function rerender() {
+      configureDataTable()
+
+      let pageNumber = document.getElementById("page_number")
+      pageNumber.innerText = window.pageIndex + 1
+    }
+
+    function configurePagination() {
+      let prevBtn = document.getElementById("prev_page")
+      prevBtn.addEventListener("click", event => {
+        window.pageIndex--
+        if (window.pageIndex === 0) {
+          prevBtn.disabled = true
+        }
+        rerender()
+      })
+
+      let nextBtn = document.getElementById("next_page")
+      nextBtn.addEventListener("click", event => {
+        if (window.pageIndex === 0) {
+          let prevBtn = document.getElementById("prev_page")
+          prevBtn.disabled = false
+        }
+        window.pageIndex++
+        rerender()
+      })
+    }
+
+    window.addEventListener('load', event => {
+      configureCategoriesSelector()
+      configureDataTable()
+      configurePagination()
+    })
+
+  </script>
+</head>
+<body>
+  <div id="categories_selector"
+       style="padding: 1rem 0; display: flex; justify-content: space-between;">
+    <strong>Categories:</strong>
+  </div>
+  <table id="data_table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Nutrient</th>
+        <th>Unit</th>
+        <th>Amount / 100g</th>
+      </tr>
+    </thead>
+  </table>
+  <div id="page_controls"
+       style="display: flex; justify-content: flex-end; align-items: baseline;">
+    <button disabled id="prev_page">Prev</button>
+    <div id="page_number">1</div>
+    <button id="next_page">Next</button>
+  </div>
+</body>
+</html>
