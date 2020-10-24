@@ -117,9 +117,13 @@
         return desired_categories.includes(row[1]) && row[2] === nutrient
       })
 
+      const num_pages = filteredData.length % window.pageSize == 0 ?
+        filteredData.length / window.pageSize :
+        (Math.floor(filteredData.length / window.pageSize) + 1)
+
       for (let [j, row] of filteredData.entries()) {
-        if (j < pageIndex * pageSize) continue;
-        if (j === (pageIndex + 1) * pageSize) break;
+        if (j < pageIndex * window.pageSize) continue;
+        if (j === (pageIndex + 1) * window.pageSize) break;
 
         let tr = document.createElement("tr")
         for (let [i, col] of row.entries()) {
@@ -134,13 +138,15 @@
         }
         tbody.appendChild(tr)
       }
+
+      return num_pages
     }
 
     function rerender() {
-      configureDataTable()
+      const num_pages = configureDataTable()
 
       let pageNumber = document.getElementById("page_number")
-      pageNumber.innerText = window.pageIndex + 1
+      pageNumber.innerText = `${window.pageIndex + 1} / ${num_pages}`
     }
 
     function configurePagination() {
@@ -167,8 +173,8 @@
     window.addEventListener('load', event => {
       configureCategoriesSelector()
       configureNutrientSelector()
-      configureDataTable()
       configurePagination()
+      rerender()
     })
 
   </script>
