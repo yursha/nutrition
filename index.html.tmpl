@@ -38,6 +38,30 @@
       '20': 'Grains'
     }
 
+    function configureNutrientSelector() {
+      const nutrient_selector = document.getElementById("nutrient_selector")
+      const nutrient_ids = new Set()
+      const nutrients = []
+      for (let row of window.data) {
+        const id = row[2]
+        if (nutrient_ids.has(id)) continue
+        nutrient_ids.add(id)
+        nutrients.push({ id, name: row[3] })
+      }
+      nutrients.sort((a, b) => a.name.localeCompare(b.name))
+
+      for (let nutrient of nutrients) {
+        let option = document.createElement("option")
+        option.value = nutrient.id
+        option.innerText = nutrient.name
+        nutrient_selector.appendChild(option)
+      }
+
+      nutrient_selector.addEventListener("change", event => {
+        rerender()
+      })
+    }
+
     function configureCategoriesSelector() {
       const categories_selector = document.getElementById("categories_selector")
       const category_ids = new Set()
@@ -77,6 +101,8 @@
         }
       }
 
+      const nutrient = document.getElementById("nutrient_selector").value
+
       const data_table = document.getElementById("data_table")
 
       // Remove all rows except for the heading
@@ -86,7 +112,7 @@
       let tbody = data_table.createTBody()
 
       const filteredData = window.data.filter(row => {
-        return desired_categories.includes(row[1])
+        return desired_categories.includes(row[1]) && row[2] === nutrient
       })
 
       for (let [j, row] of filteredData.entries()) {
@@ -138,6 +164,7 @@
 
     window.addEventListener('load', event => {
       configureCategoriesSelector()
+      configureNutrientSelector()
       configureDataTable()
       configurePagination()
     })
@@ -148,6 +175,11 @@
   <div id="categories_selector"
        style="padding: 1rem 0; display: flex; justify-content: space-between;">
     <strong>Categories:</strong>
+  </div>
+  <div style="padding: 1rem 0;">
+    <strong>Nutrient:</strong>
+    <select id="nutrient_selector"
+            style="padding: 0.5rem; border: none; outline: none;"></select>
   </div>
   <table id="data_table">
     <thead>
