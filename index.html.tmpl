@@ -95,14 +95,12 @@
 
         let tr = document.createElement("tr")
         for (let [i, col] of row.entries()) {
-          if ([1, 2].includes(i)) continue
+          if ([1, 2, 4].includes(i)) continue
           let td = document.createElement("td")
-          td.innerText = col
+          td.innerText = i === 3 ? `${col} (${row[i+1].toLowerCase()})` : col
           tr.appendChild(td)
 
-          if (i == 4) {
-            td.style.textAlign = 'center'
-          } else if (i == 5) {
+          if (i == 5) {
             td.style.textAlign = 'right'
           }
         }
@@ -156,7 +154,6 @@
       <tr>
         <th>Food</th>
         <th>Nutrient</th>
-        <th>Unit</th>
         <th>Amount / 100g</th>
       </tr>
     </thead>
