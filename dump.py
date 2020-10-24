@@ -18,7 +18,7 @@ c.execute("""
       JOIN food f ON f.fdc_id = fn.fdc_id
       JOIN food_category fc ON f.food_category_id = fc.id
     WHERE f.food_category_id in (1, 2, 9, 11, 12, 15, 16, 20)
-    ORDER BY nutrient_amount_per_100g DESC
+    ORDER BY (nutrient_amount_per_100g + 0) DESC
 """)
 data = json.dumps(c.fetchall())
 
