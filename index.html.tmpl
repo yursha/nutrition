@@ -39,6 +39,21 @@
       '20': 'Grains'
     }
 
+    function configureDenominatorSelector() {
+      const denominator_selector = document.getElementById("denominator_selector")
+      for (let denominator of ['100 g', '100 kcal', '1 g fat']) {
+        let option = document.createElement("option")
+        option.value = denominator
+        option.innerText = denominator
+        denominator_selector.appendChild(option)
+      }
+
+      denominator_selector.addEventListener("change", event => {
+        window.pageIndex = 0
+        rerender()
+      })
+    }
+
     function configureNutrientSelector() {
       const nutrient_selector = document.getElementById("nutrient_selector")
       const nutrient_ids = new Set()
@@ -59,6 +74,7 @@
       }
 
       nutrient_selector.addEventListener("change", event => {
+        window.pageIndex = 0
         rerender()
       })
     }
@@ -82,6 +98,7 @@
         input.type = "checkbox"
         input.id = category.id
         input.addEventListener("change", event => {
+          window.pageIndex = 0
           rerender()
         })
         label.appendChild(input)
@@ -104,6 +121,7 @@
       }
 
       const nutrient = document.getElementById("nutrient_selector").value
+      const denominator = document.getElementById("denominator_selector").value
 
       const data_table = document.getElementById("data_table")
 
@@ -117,6 +135,20 @@
         return desired_categories.includes(row[1]) && row[2] === nutrient
       })
 
+      if (denominator === '100 kcal') {
+        filteredData.sort((a, b) => {
+          return parseFloat(b[6]) - parseFloat(a[6])
+        })
+      } else if (denominator === '1 g fat') {
+        filteredData.sort((a, b) => {
+          return parseFloat(b[7]) - parseFloat(a[7])
+        })
+      } else if (denominator === '100 g') {
+        filteredData.sort((a, b) => {
+          return parseFloat(b[5]) - parseFloat(a[5])
+        })
+      }
+
       const num_pages = filteredData.length % window.pageSize == 0 ?
         filteredData.length / window.pageSize :
         (Math.floor(filteredData.length / window.pageSize) + 1)
@@ -127,9 +159,21 @@
 
         let tr = document.createElement("tr")
         for (let [i, col] of row.entries()) {
-          if ([1, 2, 4].includes(i)) continue
+          if ([1, 2, 4, 6, 7].includes(i)) continue
           let td = document.createElement("td")
-          td.innerText = i === 3 ? `${col} (${row[i+1].toLowerCase()})` : col
+          if (i === 3) {
+            td.innerText = `${col} (${row[i+1].toLowerCase()})`
+          } else if (i === 5) {
+            if (denominator === '100 g') {
+              td.innerText = col
+            } else if (denominator === '100 kcal') {
+              td.innerText = row[i + 1]
+            } else if (denominator === '1 g fat') {
+              td.innerText = row[i + 2]
+            }
+          } else {
+            td.innerText = col
+          }
           tr.appendChild(td)
 
           if (i == 5) {
@@ -173,6 +217,7 @@
     window.addEventListener('load', event => {
       configureCategoriesSelector()
       configureNutrientSelector()
+      configureDenominatorSelector()
       configurePagination()
       rerender()
     })
@@ -184,17 +229,24 @@
        style="padding: 1rem 0; display: flex; justify-content: space-between;">
     <strong>Categories:</strong>
   </div>
-  <div style="padding: 1rem 0;">
-    <strong>Nutrient:</strong>
-    <select id="nutrient_selector"
-            style="padding: 0.5rem; border: none; outline: none;"></select>
+  <div style="padding: 1rem 0; display: flex;">
+    <div style="flex: 4;">
+      <strong>Nutrient:</strong>
+      <select id="nutrient_selector"
+              style="padding: 0.5rem; border: none; outline: none;"></select>
+    </div>
+    <div style="flex: 8;">
+      <strong>Per:</strong>
+      <select id="denominator_selector"
+              style="padding: 0.5rem; border: none; outline: none;"></select>
+    </div>
   </div>
   <table id="data_table">
     <thead>
       <tr>
         <th>Food</th>
         <th>Nutrient</th>
-        <th>Amount / 100g</th>
+        <th>Amount</th>
       </tr>
     </thead>
   </table>
