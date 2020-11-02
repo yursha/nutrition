@@ -39,9 +39,14 @@
       '20': 'Grains'
     }
 
+    const DENOMINATOR_WEIGHT = '100 g weight'
+    const DENOMINATOR_ENERGY = '100 kcal'
+    const DENOMINATOR_FAT = '1 g fat'
+
     function configureDenominatorSelector() {
       const denominator_selector = document.getElementById("denominator_selector")
-      for (let denominator of ['100 g', '100 kcal', '1 g fat']) {
+      for (let denominator of [
+            DENOMINATOR_WEIGHT, DENOMINATOR_ENERGY, DENOMINATOR_FAT]) {
         let option = document.createElement("option")
         option.value = denominator
         option.innerText = denominator
@@ -135,15 +140,15 @@
         return desired_categories.includes(row[1]) && row[2] === nutrient
       })
 
-      if (denominator === '100 kcal') {
+      if (denominator === DENOMINATOR_ENERGY) {
         filteredData.sort((a, b) => {
           return parseFloat(b[6]) - parseFloat(a[6])
         })
-      } else if (denominator === '1 g fat') {
+      } else if (denominator === DENOMINATOR_FAT) {
         filteredData.sort((a, b) => {
           return parseFloat(b[7]) - parseFloat(a[7])
         })
-      } else if (denominator === '100 g') {
+      } else if (denominator === DENOMINATOR_WEIGHT) {
         filteredData.sort((a, b) => {
           return parseFloat(b[5]) - parseFloat(a[5])
         })
@@ -164,11 +169,11 @@
           if (i === 3) {
             td.innerText = `${col} (${row[i+1].toLowerCase()})`
           } else if (i === 5) {
-            if (denominator === '100 g') {
+            if (denominator === DENOMINATOR_WEIGHT) {
               td.innerText = col
-            } else if (denominator === '100 kcal') {
+            } else if (denominator === DENOMINATOR_ENERGY) {
               td.innerText = row[i + 1]
-            } else if (denominator === '1 g fat') {
+            } else if (denominator === DENOMINATOR_FAT) {
               td.innerText = row[i + 2]
             }
           } else {
