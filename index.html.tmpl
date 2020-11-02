@@ -43,6 +43,33 @@
     const DENOMINATOR_ENERGY = '100 kcal'
     const DENOMINATOR_FAT = '1 g fat'
 
+    const CONSUMER = {
+      MALE_0_6_MO: 'Male (0 through 6 mo)',
+      MALE_7_12_MO: 'Male (7 through 12 mo)',
+      MALE_1_3_Y: 'Male (1 through 3 y)',
+      MALE_4_8_Y: 'Male (4 through 8 y)',
+      MALE_9_13_Y: 'Male (9 through 13 y)',
+      MALE_14_18_Y: 'Male (14 through 18 y)',
+      MALE_19_30_Y: 'Male (19 through 30 y)',
+      MALE_31_50_Y: 'Male (31 through 50 y)',
+      MALE_51_70_Y: 'Male (51 through 70 y)',
+      MALE_71_Y: 'Male (> 70 y)',
+      FEMALE_0_6_MO: 'Female (0 through 6 mo)',
+      FEMALE_7_12_MO: 'Female (7 through 12 mo)',
+      FEMALE_1_3_Y: 'Female (1 through 3 y)',
+      FEMALE_4_8_Y: 'Female (4 through 8 y)',
+      FEMALE_9_13_Y: 'Female (9 through 13 y)',
+      FEMALE_14_18_Y: 'Female (14 through 18 y)',
+      FEMALE_19_30_Y: 'Female (19 through 30 y)',
+      FEMALE_31_50_Y: 'Female (31 through 50 y)',
+      FEMALE_51_70_Y: 'Female (51 through 70 y)',
+      FEMALE_71_Y: 'Female (> 70 y)',
+      PREGNANCY_UNDER_18_Y: 'Pregnancy (<= 18 y)',
+      PREGNANCY_19_50_Y: 'Pregnancy (19 through 50 y)',
+      LACTATION_UNDER_18_Y: 'Lactation (<= 18 y)',
+      LACTATION_19_50_Y: 'Lactation (19 through 50 y)'
+    }
+
     const RDA = {
       VITAMIN_C: { unit: 'mg', quantity: 90 }
     }
@@ -58,6 +85,22 @@
       }
 
       denominator_selector.addEventListener("change", event => {
+        window.pageIndex = 0
+        rerender()
+      })
+    }
+
+    // Food And Nutrition Board Life Stage Groups
+    function configureConsumerSelector() {
+      const consumer_selector = document.getElementById("consumer_selector")
+      for (let consumer of Object.values(CONSUMER)) {
+        let option = document.createElement("option")
+        option.value = consumer
+        option.innerText = consumer
+        consumer_selector.appendChild(option)
+      }
+
+      consumer_selector.addEventListener("change", event => {
         window.pageIndex = 0
         rerender()
       })
@@ -231,6 +274,7 @@
       configureCategoriesSelector()
       configureNutrientSelector()
       configureDenominatorSelector()
+      configureConsumerSelector()
       configurePagination()
       rerender()
     })
@@ -248,9 +292,14 @@
       <select id="nutrient_selector"
               style="padding: 0.5rem; border: none; outline: none;"></select>
     </div>
-    <div style="flex: 8;">
+    <div style="flex: 4;">
       <strong>Per:</strong>
       <select id="denominator_selector"
+              style="padding: 0.5rem; border: none; outline: none;"></select>
+    </div>
+    <div style="flex: 4;">
+      <strong>For:</strong>
+      <select id="consumer_selector"
               style="padding: 0.5rem; border: none; outline: none;"></select>
     </div>
   </div>
