@@ -70,8 +70,35 @@
       LACTATION_19_50_Y: 'Lactation (19 through 50 y)'
     }
 
+    // Source:
+    //   https://www.nap.edu/read/11537/chapter/21
     const RDA = {
-      VITAMIN_C: { unit: 'mg', quantity: 90 }
+      VITAMIN_C: { unit: 'mg', stages: {
+        [CONSUMER.MALE_0_6_MO]: { type: 'AI', amount: 40},
+        [CONSUMER.MALE_7_12_MO]: { type: 'AI', amount: 50},
+        [CONSUMER.MALE_1_3_Y]: { type: 'RDA', amount: 15},
+        [CONSUMER.MALE_4_8_Y]: { type: 'RDA', amount: 25},
+        [CONSUMER.MALE_9_13_Y]: { type: 'RDA', amount: 45},
+        [CONSUMER.MALE_14_18_Y]: { type: 'RDA', amount: 75},
+        [CONSUMER.MALE_19_30_Y]: { type: 'RDA', amount: 90},
+        [CONSUMER.MALE_31_50_Y]: { type: 'RDA', amount: 90},
+        [CONSUMER.MALE_51_70_Y]: { type: 'RDA', amount: 90},
+        [CONSUMER.MALE_71_Y]: { type: 'RDA', amount: 90},
+        [CONSUMER.FEMALE_0_6_MO]: { type: 'RDA', amount: 40},
+        [CONSUMER.FEMALE_7_12_MO]: { type: 'RDA', amount: 50},
+        [CONSUMER.FEMALE_1_3_Y]: { type: 'RDA', amount: 15},
+        [CONSUMER.FEMALE_4_8_Y]: { type: 'RDA', amount: 25},
+        [CONSUMER.FEMALE_9_13_Y]: { type: 'RDA', amount: 45},
+        [CONSUMER.FEMALE_14_18_Y]: { type: 'RDA', amount: 65},
+        [CONSUMER.FEMALE_19_30_Y]: { type: 'RDA', amount: 75},
+        [CONSUMER.FEMALE_31_50_Y]: { type: 'RDA', amount: 75},
+        [CONSUMER.FEMALE_51_70_Y]: { type: 'RDA', amount: 75},
+        [CONSUMER.FEMALE_71_Y]: { type: 'RDA', amount: 75},
+        [CONSUMER.PREGNANCY_UNDER_18_Y]: { type: 'RDA', amount: 80},
+        [CONSUMER.PREGNANCY_19_50_Y]: { type: 'RDA', amount: 85},
+        [CONSUMER.LACTATION_UNDER_18_Y]: { type: 'RDA', amount: 115},
+        [CONSUMER.LACTATION_19_50_Y]: { type: 'RDA', amount: 120}
+      }}
     }
 
     function configureDenominatorSelector() {
@@ -174,6 +201,7 @@
 
       const nutrient = document.getElementById("nutrient_selector").value
       const denominator = document.getElementById("denominator_selector").value
+      const consumer = document.getElementById("consumer_selector").value
 
       const data_table = document.getElementById("data_table")
 
@@ -224,8 +252,9 @@
               td.innerText = row[i + 2]
             }
             if (row[3] === 'Vitamin C, total ascorbic acid') {
+              const daily_dose = RDA.VITAMIN_C.stages[consumer].amount
               td.innerText = 
-                `${(td.innerText * 100 / RDA.VITAMIN_C.quantity).toFixed(1)}%`
+                `${(td.innerText * 100 / daily_dose).toFixed(1)}%`
             }
           } else {
             td.innerText = col
