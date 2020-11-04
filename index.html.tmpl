@@ -19,6 +19,9 @@
     th {
       background-color: beige;
     }
+    input {
+      padding: 0.5rem 0.25rem;
+    }
     #page_controls > button {
       margin: 1rem;
       padding: 0.5rem 1.5rem;
@@ -203,6 +206,8 @@
       const denominator = document.getElementById("denominator_selector").value
       const consumer = document.getElementById("consumer_selector").value
 
+      const food_filter = document.getElementById("food_filter").value.toLowerCase()
+
       const data_table = document.getElementById("data_table")
 
       // Remove all rows except for the heading
@@ -211,9 +216,14 @@
       }
       let tbody = data_table.createTBody()
 
-      const filteredData = window.data.filter(row => {
+      let filteredData = window.data.filter(row => {
         return desired_categories.includes(row[1]) && row[2] === nutrient
       })
+      if (food_filter) {
+        filteredData = filteredData.filter(row => {
+          return row[0].toLowerCase().includes(food_filter)
+        })
+      }
 
       if (denominator === DENOMINATOR_ENERGY) {
         filteredData.sort((a, b) => {
@@ -299,12 +309,20 @@
       })
     }
 
+    function configureFoodFilter() {
+      let filter = document.getElementById("food_filter")
+      filter.addEventListener("keyup", event => {
+        rerender()
+      })
+    }
+
     window.addEventListener('load', event => {
       configureCategoriesSelector()
       configureNutrientSelector()
       configureDenominatorSelector()
       configureConsumerSelector()
       configurePagination()
+      configureFoodFilter()
       rerender()
     })
 
@@ -312,10 +330,10 @@
 </head>
 <body>
   <div id="categories_selector"
-       style="padding: 1rem 0; display: flex; justify-content: space-between;">
+       style="padding: 0.5rem 0; display: flex; justify-content: space-between;">
     <strong>Categories:</strong>
   </div>
-  <div style="padding: 1rem 0; display: flex;">
+  <div style="padding: 0.5rem 0; display: flex;">
     <div style="flex: 4;">
       <strong>Nutrient:</strong>
       <select id="nutrient_selector"
@@ -331,6 +349,10 @@
       <select id="consumer_selector"
               style="padding: 0.5rem; border: none; outline: none;"></select>
     </div>
+  </div>
+  <div style="padding: 0.5rem 0;">
+    <strong>Food filter:</strong>
+    <input id="food_filter" style="margin-left: 1rem; width: 25rem;">
   </div>
   <table id="data_table">
     <thead>
