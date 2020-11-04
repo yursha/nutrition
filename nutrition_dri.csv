@@ -1,0 +1,1035 @@
+id,fdc_nutrient_id,nutrient_name,type,unit,amount,life_stage_id,sex,source_id,category
+1,1106,Vitamin A,AI,mgc,400,Infant (0-6 mo),,1,vitamin
+2,1106,Vitamin A,AI,mgc,500,Infant (7-12 mo),,1,vitamin
+3,1106,Vitamin A,RDA,mgc,300,Children (1-3 y),,1,vitamin
+4,1106,Vitamin A,RDA,mgc,400,Children (4-8 y),,1,vitamin
+5,1106,Vitamin A,RDA,mgc,600,9-13 y,Male,1,vitamin
+6,1106,Vitamin A,RDA,mgc,900,14-18 y,Male,1,vitamin
+7,1106,Vitamin A,RDA,mgc,900,19-30 y,Male,1,vitamin
+8,1106,Vitamin A,RDA,mgc,900,31-50 y,Male,1,vitamin
+9,1106,Vitamin A,RDA,mgc,900,51-70 y,Male,1,vitamin
+10,1106,Vitamin A,RDA,mgc,900,> 70 y,Male,1,vitamin
+11,1106,Vitamin A,RDA,mgc,600,9-13 y,Female,1,vitamin
+12,1106,Vitamin A,RDA,mgc,700,14-18 y,Female,1,vitamin
+13,1106,Vitamin A,RDA,mgc,700,19-30 y,Female,1,vitamin
+14,1106,Vitamin A,RDA,mgc,700,31-50 y,Female,1,vitamin
+15,1106,Vitamin A,RDA,mgc,700,51-70 y,Female,1,vitamin
+16,1106,Vitamin A,RDA,mgc,700,> 70 y,Female,1,vitamin
+17,1106,Vitamin A,RDA,mgc,750,14-18 y,Pregnancy,1,vitamin
+18,1106,Vitamin A,RDA,mgc,770,19-30 y,Pregnancy,1,vitamin
+19,1106,Vitamin A,RDA,mgc,770,31-50 y,Pregnancy,1,vitamin
+20,1106,Vitamin A,RDA,mgc,1200,14-18 y,Lactation,1,vitamin
+21,1106,Vitamin A,RDA,mgc,1300,19-30 y,Lactation,1,vitamin
+22,1106,Vitamin A,RDA,mgc,1300,31-50 y,Lactation,1,vitamin
+23,1162,Vitamin C,AI,mg,40,Infant (0-6 mo),,1,vitamin
+24,1162,Vitamin C,AI,mg,50,Infant (7-12 mo),,1,vitamin
+25,1162,Vitamin C,RDA,mg,15,Children (1-3 y),,1,vitamin
+26,1162,Vitamin C,RDA,mg,25,Children (4-8 y),,1,vitamin
+27,1162,Vitamin C,RDA,mg,45,9-13 y,Male,1,vitamin
+28,1162,Vitamin C,RDA,mg,75,14-18 y,Male,1,vitamin
+29,1162,Vitamin C,RDA,mg,90,19-30 y,Male,1,vitamin
+30,1162,Vitamin C,RDA,mg,90,31-50 y,Male,1,vitamin
+31,1162,Vitamin C,RDA,mg,90,51-70 y,Male,1,vitamin
+32,1162,Vitamin C,RDA,mg,90,> 70 y,Male,1,vitamin
+33,1162,Vitamin C,RDA,mg,45,9-13 y,Female,1,vitamin
+34,1162,Vitamin C,RDA,mg,65,14-18 y,Female,1,vitamin
+35,1162,Vitamin C,RDA,mg,75,19-30 y,Female,1,vitamin
+36,1162,Vitamin C,RDA,mg,75,31-50 y,Female,1,vitamin
+37,1162,Vitamin C,RDA,mg,75,51-70 y,Female,1,vitamin
+38,1162,Vitamin C,RDA,mg,75,> 70 y,Female,1,vitamin
+39,1162,Vitamin C,RDA,mg,80,14-18 y,Pregnancy,1,vitamin
+40,1162,Vitamin C,RDA,mg,85,19-30 y,Pregnancy,1,vitamin
+41,1162,Vitamin C,RDA,mg,85,31-50 y,Pregnancy,1,vitamin
+42,1162,Vitamin C,RDA,mg,115,14-18 y,Lactation,1,vitamin
+43,1162,Vitamin C,RDA,mg,120,19-30 y,Lactation,1,vitamin
+44,1162,Vitamin C,RDA,mg,120,31-50 y,Lactation,1,vitamin
+45,1162,Vitamin D,AI,mcg,10,Infant (0-6 mo),,2,vitamin
+46,1162,Vitamin D,AI,mcg,10,Infant (7-12 mo),,2,vitamin
+47,1162,Vitamin D,RDA,mcg,15,Children (1-3 y),,2,vitamin
+48,1162,Vitamin D,RDA,mcg,15,Children (4-8 y),,2,vitamin
+49,1162,Vitamin D,RDA,mcg,15,9-13 y,Male,2,vitamin
+50,1162,Vitamin D,RDA,mcg,15,14-18 y,Male,2,vitamin
+51,1162,Vitamin D,RDA,mcg,15,19-30 y,Male,2,vitamin
+52,1162,Vitamin D,RDA,mcg,15,31-50 y,Male,2,vitamin
+53,1162,Vitamin D,RDA,mcg,15,51-70 y,Male,2,vitamin
+54,1162,Vitamin D,RDA,mcg,20,> 70 y,Male,2,vitamin
+55,1162,Vitamin D,RDA,mcg,15,9-13 y,Female,2,vitamin
+56,1162,Vitamin D,RDA,mcg,15,14-18 y,Female,2,vitamin
+57,1162,Vitamin D,RDA,mcg,15,19-30 y,Female,2,vitamin
+58,1162,Vitamin D,RDA,mcg,15,31-50 y,Female,2,vitamin
+59,1162,Vitamin D,RDA,mcg,15,51-70 y,Female,2,vitamin
+60,1162,Vitamin D,RDA,mcg,20,> 70 y,Female,2,vitamin
+61,1162,Vitamin D,RDA,mcg,15,14-18 y,Pregnancy,2,vitamin
+62,1162,Vitamin D,RDA,mcg,15,19-30 y,Pregnancy,2,vitamin
+63,1162,Vitamin D,RDA,mcg,15,31-50 y,Pregnancy,2,vitamin
+64,1162,Vitamin D,RDA,mcg,15,14-18 y,Lactation,2,vitamin
+65,1162,Vitamin D,RDA,mcg,15,19-30 y,Lactation,2,vitamin
+66,1162,Vitamin D,RDA,mcg,15,31-50 y,Lactation,2,vitamin
+67,1109,Vitamin E,AI,mg,4,Infant (0-6 mo),,1,vitamin
+68,1109,Vitamin E,AI,mg,5,Infant (7-12 mo),,1,vitamin
+69,1109,Vitamin E,DRA,mg,6,Children (1-3 y),,1,vitamin
+70,1109,Vitamin E,DRA,mg,7,Children (4-8 y),,1,vitamin
+71,1109,Vitamin E,DRA,mg,11,9-13 y,Male,1,vitamin
+72,1109,Vitamin E,DRA,mg,15,14-18 y,Male,1,vitamin
+73,1109,Vitamin E,DRA,mg,15,19-30 y,Male,1,vitamin
+74,1109,Vitamin E,DRA,mg,15,31-50 y,Male,1,vitamin
+75,1109,Vitamin E,DRA,mg,15,51-70 y,Male,1,vitamin
+76,1109,Vitamin E,DRA,mg,15,> 70 y,Male,1,vitamin
+77,1109,Vitamin E,DRA,mg,11,9-13 y,Female,1,vitamin
+78,1109,Vitamin E,DRA,mg,15,14-18 y,Female,1,vitamin
+79,1109,Vitamin E,DRA,mg,15,19-30 y,Female,1,vitamin
+80,1109,Vitamin E,DRA,mg,15,31-50 y,Female,1,vitamin
+81,1109,Vitamin E,DRA,mg,15,51-70 y,Female,1,vitamin
+82,1109,Vitamin E,DRA,mg,15,> 70 y,Female,1,vitamin
+83,1109,Vitamin E,DRA,mg,15,14-18 y,Pregnancy,1,vitamin
+84,1109,Vitamin E,DRA,mg,15,19-30 y,Pregnancy,1,vitamin
+85,1109,Vitamin E,DRA,mg,15,31-50 y,Pregnancy,1,vitamin
+86,1109,Vitamin E,DRA,mg,19,14-18 y,Lactation,1,vitamin
+87,1109,Vitamin E,DRA,mg,19,19-30 y,Lactation,1,vitamin
+88,1109,Vitamin E,DRA,mg,19,31-50 y,Lactation,1,vitamin
+89,1185,Vitamin K,AI,mcg,2,Infant (0-6 mo),,1,vitamin
+90,1185,Vitamin K,AI,mcg,2.5,Infant (7-12 mo),,1,vitamin
+91,1185,Vitamin K,AI,mcg,30,Children (1-3 y),,1,vitamin
+92,1185,Vitamin K,AI,mcg,55,Children (4-8 y),,1,vitamin
+93,1185,Vitamin K,AI,mcg,60,9-13 y,Male,1,vitamin
+94,1185,Vitamin K,AI,mcg,75,14-18 y,Male,1,vitamin
+95,1185,Vitamin K,AI,mcg,120,19-30 y,Male,1,vitamin
+96,1185,Vitamin K,AI,mcg,120,31-50 y,Male,1,vitamin
+97,1185,Vitamin K,AI,mcg,120,51-70 y,Male,1,vitamin
+98,1185,Vitamin K,AI,mcg,120,> 70 y,Male,1,vitamin
+99,1185,Vitamin K,AI,mcg,60,9-13 y,Female,1,vitamin
+100,1185,Vitamin K,AI,mcg,75,14-18 y,Female,1,vitamin
+101,1185,Vitamin K,AI,mcg,90,19-30 y,Female,1,vitamin
+102,1185,Vitamin K,AI,mcg,90,31-50 y,Female,1,vitamin
+103,1185,Vitamin K,AI,mcg,90,51-70 y,Female,1,vitamin
+104,1185,Vitamin K,AI,mcg,90,> 70 y,Female,1,vitamin
+105,1185,Vitamin K,AI,mcg,75,14-18 y,Pregnancy,1,vitamin
+106,1185,Vitamin K,AI,mcg,90,19-30 y,Pregnancy,1,vitamin
+107,1185,Vitamin K,AI,mcg,90,31-50 y,Pregnancy,1,vitamin
+108,1185,Vitamin K,AI,mcg,75,14-18 y,Lactation,1,vitamin
+109,1185,Vitamin K,AI,mcg,90,19-30 y,Lactation,1,vitamin
+110,1185,Vitamin K,AI,mcg,90,31-50 y,Lactation,1,vitamin
+111,1165,Thiamin,AI,mg,0.2,Infant (0-6 mo),,1,vitamin
+112,1165,Thiamin,AI,mg,0.3,Infant (7-12 mo),,1,vitamin
+113,1165,Thiamin,DRA,mg,0.5,Children (1-3 y),,1,vitamin
+114,1165,Thiamin,DRA,mg,0.6,Children (4-8 y),,1,vitamin
+115,1165,Thiamin,DRA,mg,0.9,9-13 y,Male,1,vitamin
+116,1165,Thiamin,DRA,mg,1.2,14-18 y,Male,1,vitamin
+117,1165,Thiamin,DRA,mg,1.2,19-30 y,Male,1,vitamin
+118,1165,Thiamin,DRA,mg,1.2,31-50 y,Male,1,vitamin
+119,1165,Thiamin,DRA,mg,1.2,51-70 y,Male,1,vitamin
+120,1165,Thiamin,DRA,mg,1.2,> 70 y,Male,1,vitamin
+121,1165,Thiamin,DRA,mg,0.9,9-13 y,Female,1,vitamin
+122,1165,Thiamin,DRA,mg,1,14-18 y,Female,1,vitamin
+123,1165,Thiamin,DRA,mg,1.1,19-30 y,Female,1,vitamin
+124,1165,Thiamin,DRA,mg,1.1,31-50 y,Female,1,vitamin
+125,1165,Thiamin,DRA,mg,1.1,51-70 y,Female,1,vitamin
+126,1165,Thiamin,DRA,mg,1.1,> 70 y,Female,1,vitamin
+127,1165,Thiamin,DRA,mg,1.4,14-18 y,Pregnancy,1,vitamin
+128,1165,Thiamin,DRA,mg,1.4,19-30 y,Pregnancy,1,vitamin
+129,1165,Thiamin,DRA,mg,1.4,31-50 y,Pregnancy,1,vitamin
+130,1165,Thiamin,DRA,mg,1.4,14-18 y,Lactation,1,vitamin
+131,1165,Thiamin,DRA,mg,1.4,19-30 y,Lactation,1,vitamin
+132,1165,Thiamin,DRA,mg,1.4,31-50 y,Lactation,1,vitamin
+133,1166,Ribloflavin,AI,mg,0.3,Infant (0-6 mo),,1,vitamin
+134,1166,Ribloflavin,AI,mg,0.4,Infant (7-12 mo),,1,vitamin
+135,1166,Ribloflavin,DRA,mg,0.5,Children (1-3 y),,1,vitamin
+136,1166,Ribloflavin,DRA,mg,0.6,Children (4-8 y),,1,vitamin
+137,1166,Ribloflavin,DRA,mg,0.9,9-13 y,Male,1,vitamin
+138,1166,Ribloflavin,DRA,mg,1.3,14-18 y,Male,1,vitamin
+139,1166,Ribloflavin,DRA,mg,1.3,19-30 y,Male,1,vitamin
+140,1166,Ribloflavin,DRA,mg,1.3,31-50 y,Male,1,vitamin
+141,1166,Ribloflavin,DRA,mg,1.3,51-70 y,Male,1,vitamin
+142,1166,Ribloflavin,DRA,mg,1.3,> 70 y,Male,1,vitamin
+143,1166,Ribloflavin,DRA,mg,0.9,9-13 y,Female,1,vitamin
+144,1166,Ribloflavin,DRA,mg,1,14-18 y,Female,1,vitamin
+145,1166,Ribloflavin,DRA,mg,1.1,19-30 y,Female,1,vitamin
+146,1166,Ribloflavin,DRA,mg,1.1,31-50 y,Female,1,vitamin
+147,1166,Ribloflavin,DRA,mg,1.1,51-70 y,Female,1,vitamin
+148,1166,Ribloflavin,DRA,mg,1.1,> 70 y,Female,1,vitamin
+149,1166,Ribloflavin,DRA,mg,1.4,14-18 y,Pregnancy,1,vitamin
+150,1166,Ribloflavin,DRA,mg,1.4,19-30 y,Pregnancy,1,vitamin
+151,1166,Ribloflavin,DRA,mg,1.4,31-50 y,Pregnancy,1,vitamin
+152,1166,Ribloflavin,DRA,mg,1.6,14-18 y,Lactation,1,vitamin
+153,1166,Ribloflavin,DRA,mg,1.6,19-30 y,Lactation,1,vitamin
+154,1166,Ribloflavin,DRA,mg,1.6,31-50 y,Lactation,1,vitamin
+155,1167,Niacin,AI,mg,2,Infant (0-6 mo),,1,vitamin
+156,1167,Niacin,AI,mg,4,Infant (7-12 mo),,1,vitamin
+157,1167,Niacin,DRA,mg,6,Children (1-3 y),,1,vitamin
+158,1167,Niacin,DRA,mg,8,Children (4-8 y),,1,vitamin
+159,1167,Niacin,DRA,mg,12,9-13 y,Male,1,vitamin
+160,1167,Niacin,DRA,mg,16,14-18 y,Male,1,vitamin
+161,1167,Niacin,DRA,mg,16,19-30 y,Male,1,vitamin
+162,1167,Niacin,DRA,mg,16,31-50 y,Male,1,vitamin
+163,1167,Niacin,DRA,mg,16,51-70 y,Male,1,vitamin
+164,1167,Niacin,DRA,mg,16,> 70 y,Male,1,vitamin
+165,1167,Niacin,DRA,mg,12,9-13 y,Female,1,vitamin
+166,1167,Niacin,DRA,mg,14,14-18 y,Female,1,vitamin
+167,1167,Niacin,DRA,mg,14,19-30 y,Female,1,vitamin
+168,1167,Niacin,DRA,mg,14,31-50 y,Female,1,vitamin
+169,1167,Niacin,DRA,mg,14,51-70 y,Female,1,vitamin
+170,1167,Niacin,DRA,mg,14,> 70 y,Female,1,vitamin
+171,1167,Niacin,DRA,mg,18,14-18 y,Pregnancy,1,vitamin
+172,1167,Niacin,DRA,mg,18,19-30 y,Pregnancy,1,vitamin
+173,1167,Niacin,DRA,mg,18,31-50 y,Pregnancy,1,vitamin
+174,1167,Niacin,DRA,mg,17,14-18 y,Lactation,1,vitamin
+175,1167,Niacin,DRA,mg,17,19-30 y,Lactation,1,vitamin
+176,1167,Niacin,DRA,mg,17,31-50 y,Lactation,1,vitamin
+177,1175,Vitamin B6,AI,mg,0.1,Infant (0-6 mo),,1,vitamin
+178,1175,Vitamin B6,AI,mg,0.3,Infant (7-12 mo),,1,vitamin
+179,1175,Vitamin B6,DRA,mg,0.5,Children (1-3 y),,1,vitamin
+180,1175,Vitamin B6,DRA,mg,0.6,Children (4-8 y),,1,vitamin
+181,1175,Vitamin B6,DRA,mg,1,9-13 y,Male,1,vitamin
+182,1175,Vitamin B6,DRA,mg,1.3,14-18 y,Male,1,vitamin
+183,1175,Vitamin B6,DRA,mg,1.3,19-30 y,Male,1,vitamin
+184,1175,Vitamin B6,DRA,mg,1.3,31-50 y,Male,1,vitamin
+185,1175,Vitamin B6,DRA,mg,1.7,51-70 y,Male,1,vitamin
+186,1175,Vitamin B6,DRA,mg,1.7,> 70 y,Male,1,vitamin
+187,1175,Vitamin B6,DRA,mg,1,9-13 y,Female,1,vitamin
+188,1175,Vitamin B6,DRA,mg,1.2,14-18 y,Female,1,vitamin
+189,1175,Vitamin B6,DRA,mg,1.3,19-30 y,Female,1,vitamin
+190,1175,Vitamin B6,DRA,mg,1.3,31-50 y,Female,1,vitamin
+191,1175,Vitamin B6,DRA,mg,1.5,51-70 y,Female,1,vitamin
+192,1175,Vitamin B6,DRA,mg,1.5,> 70 y,Female,1,vitamin
+193,1175,Vitamin B6,DRA,mg,1.9,14-18 y,Pregnancy,1,vitamin
+194,1175,Vitamin B6,DRA,mg,1.9,19-30 y,Pregnancy,1,vitamin
+195,1175,Vitamin B6,DRA,mg,1.9,31-50 y,Pregnancy,1,vitamin
+196,1175,Vitamin B6,DRA,mg,2,14-18 y,Lactation,1,vitamin
+197,1175,Vitamin B6,DRA,mg,2,19-30 y,Lactation,1,vitamin
+198,1175,Vitamin B6,DRA,mg,2,31-50 y,Lactation,1,vitamin
+199,1187,Folate,AI,mcg,65,Infant (0-6 mo),,1,vitamin
+200,1187,Folate,AI,mcg,80,Infant (7-12 mo),,1,vitamin
+201,1187,Folate,DRA,mcg,150,Children (1-3 y),,1,vitamin
+202,1187,Folate,DRA,mcg,200,Children (4-8 y),,1,vitamin
+203,1187,Folate,DRA,mcg,300,9-13 y,Male,1,vitamin
+204,1187,Folate,DRA,mcg,400,14-18 y,Male,1,vitamin
+205,1187,Folate,DRA,mcg,400,19-30 y,Male,1,vitamin
+206,1187,Folate,DRA,mcg,400,31-50 y,Male,1,vitamin
+207,1187,Folate,DRA,mcg,400,51-70 y,Male,1,vitamin
+208,1187,Folate,DRA,mcg,400,> 70 y,Male,1,vitamin
+209,1187,Folate,DRA,mcg,300,9-13 y,Female,1,vitamin
+210,1187,Folate,DRA,mcg,400,14-18 y,Female,1,vitamin
+211,1187,Folate,DRA,mcg,400,19-30 y,Female,1,vitamin
+212,1187,Folate,DRA,mcg,400,31-50 y,Female,1,vitamin
+213,1187,Folate,DRA,mcg,400,51-70 y,Female,1,vitamin
+214,1187,Folate,DRA,mcg,400,> 70 y,Female,1,vitamin
+215,1187,Folate,DRA,mcg,600,14-18 y,Pregnancy,1,vitamin
+216,1187,Folate,DRA,mcg,600,19-30 y,Pregnancy,1,vitamin
+217,1187,Folate,DRA,mcg,600,31-50 y,Pregnancy,1,vitamin
+218,1187,Folate,DRA,mcg,500,14-18 y,Lactation,1,vitamin
+219,1187,Folate,DRA,mcg,500,19-30 y,Lactation,1,vitamin
+220,1187,Folate,DRA,mcg,500,31-50 y,Lactation,1,vitamin
+221,1178,Vitamin B12,AI,mcg,0.4,Infant (0-6 mo),,1,vitamin
+222,1178,Vitamin B12,AI,mcg,0.5,Infant (7-12 mo),,1,vitamin
+223,1178,Vitamin B12,DRA,mcg,0.9,Children (1-3 y),,1,vitamin
+224,1178,Vitamin B12,DRA,mcg,1.2,Children (4-8 y),,1,vitamin
+225,1178,Vitamin B12,DRA,mcg,1.8,9-13 y,Male,1,vitamin
+226,1178,Vitamin B12,DRA,mcg,2.4,14-18 y,Male,1,vitamin
+227,1178,Vitamin B12,DRA,mcg,2.4,19-30 y,Male,1,vitamin
+228,1178,Vitamin B12,DRA,mcg,2.4,31-50 y,Male,1,vitamin
+229,1178,Vitamin B12,DRA,mcg,2.4,51-70 y,Male,1,vitamin
+230,1178,Vitamin B12,DRA,mcg,2.4,> 70 y,Male,1,vitamin
+231,1178,Vitamin B12,DRA,mcg,1.8,9-13 y,Female,1,vitamin
+232,1178,Vitamin B12,DRA,mcg,2.4,14-18 y,Female,1,vitamin
+233,1178,Vitamin B12,DRA,mcg,2.4,19-30 y,Female,1,vitamin
+234,1178,Vitamin B12,DRA,mcg,2.4,31-50 y,Female,1,vitamin
+235,1178,Vitamin B12,DRA,mcg,2.4,51-70 y,Female,1,vitamin
+236,1178,Vitamin B12,DRA,mcg,2.4,> 70 y,Female,1,vitamin
+237,1178,Vitamin B12,DRA,mcg,2.6,14-18 y,Pregnancy,1,vitamin
+238,1178,Vitamin B12,DRA,mcg,2.6,19-30 y,Pregnancy,1,vitamin
+239,1178,Vitamin B12,DRA,mcg,2.6,31-50 y,Pregnancy,1,vitamin
+240,1178,Vitamin B12,DRA,mcg,2.8,14-18 y,Lactation,1,vitamin
+241,1178,Vitamin B12,DRA,mcg,2.8,19-30 y,Lactation,1,vitamin
+242,1178,Vitamin B12,DRA,mcg,2.8,31-50 y,Lactation,1,vitamin
+243,1170,Pantothenic Acid,AI,mg,1.7,Infant (0-6 mo),,1,vitamin
+244,1170,Pantothenic Acid,AI,mg,1.8,Infant (7-12 mo),,1,vitamin
+245,1170,Pantothenic Acid,AI,mg,2,Children (1-3 y),,1,vitamin
+246,1170,Pantothenic Acid,AI,mg,3,Children (4-8 y),,1,vitamin
+247,1170,Pantothenic Acid,AI,mg,4,9-13 y,Male,1,vitamin
+248,1170,Pantothenic Acid,AI,mg,5,14-18 y,Male,1,vitamin
+249,1170,Pantothenic Acid,AI,mg,5,19-30 y,Male,1,vitamin
+250,1170,Pantothenic Acid,AI,mg,5,31-50 y,Male,1,vitamin
+251,1170,Pantothenic Acid,AI,mg,5,51-70 y,Male,1,vitamin
+252,1170,Pantothenic Acid,AI,mg,5,> 70 y,Male,1,vitamin
+253,1170,Pantothenic Acid,AI,mg,4,9-13 y,Female,1,vitamin
+254,1170,Pantothenic Acid,AI,mg,5,14-18 y,Female,1,vitamin
+255,1170,Pantothenic Acid,AI,mg,5,19-30 y,Female,1,vitamin
+256,1170,Pantothenic Acid,AI,mg,5,31-50 y,Female,1,vitamin
+257,1170,Pantothenic Acid,AI,mg,5,51-70 y,Female,1,vitamin
+258,1170,Pantothenic Acid,AI,mg,5,> 70 y,Female,1,vitamin
+259,1170,Pantothenic Acid,AI,mg,6,14-18 y,Pregnancy,1,vitamin
+260,1170,Pantothenic Acid,AI,mg,6,19-30 y,Pregnancy,1,vitamin
+261,1170,Pantothenic Acid,AI,mg,6,31-50 y,Pregnancy,1,vitamin
+262,1170,Pantothenic Acid,AI,mg,7,14-18 y,Lactation,1,vitamin
+263,1170,Pantothenic Acid,AI,mg,7,19-30 y,Lactation,1,vitamin
+264,1170,Pantothenic Acid,AI,mg,7,31-50 y,Lactation,1,vitamin
+265,1176,Biotin,AI,mcg,5,Infant (0-6 mo),,1,vitamin
+266,1176,Biotin,AI,mcg,6,Infant (7-12 mo),,1,vitamin
+267,1176,Biotin,AI,mcg,8,Children (1-3 y),,1,vitamin
+268,1176,Biotin,AI,mcg,12,Children (4-8 y),,1,vitamin
+269,1176,Biotin,AI,mcg,20,9-13 y,Male,1,vitamin
+270,1176,Biotin,AI,mcg,25,14-18 y,Male,1,vitamin
+271,1176,Biotin,AI,mcg,30,19-30 y,Male,1,vitamin
+272,1176,Biotin,AI,mcg,30,31-50 y,Male,1,vitamin
+273,1176,Biotin,AI,mcg,30,51-70 y,Male,1,vitamin
+274,1176,Biotin,AI,mcg,30,> 70 y,Male,1,vitamin
+275,1176,Biotin,AI,mcg,20,9-13 y,Female,1,vitamin
+276,1176,Biotin,AI,mcg,25,14-18 y,Female,1,vitamin
+277,1176,Biotin,AI,mcg,30,19-30 y,Female,1,vitamin
+278,1176,Biotin,AI,mcg,30,31-50 y,Female,1,vitamin
+279,1176,Biotin,AI,mcg,30,51-70 y,Female,1,vitamin
+280,1176,Biotin,AI,mcg,30,> 70 y,Female,1,vitamin
+281,1176,Biotin,AI,mcg,30,14-18 y,Pregnancy,1,vitamin
+282,1176,Biotin,AI,mcg,30,19-30 y,Pregnancy,1,vitamin
+283,1176,Biotin,AI,mcg,30,31-50 y,Pregnancy,1,vitamin
+284,1176,Biotin,AI,mcg,35,14-18 y,Lactation,1,vitamin
+285,1176,Biotin,AI,mcg,35,19-30 y,Lactation,1,vitamin
+286,1176,Biotin,AI,mcg,35,31-50 y,Lactation,1,vitamin
+287,1180,Choline,AI,mg,125,Infant (0-6 mo),,1,vitamin
+288,1180,Choline,AI,mg,150,Infant (7-12 mo),,1,vitamin
+289,1180,Choline,AI,mg,200,Children (1-3 y),,1,vitamin
+290,1180,Choline,AI,mg,250,Children (4-8 y),,1,vitamin
+291,1180,Choline,AI,mg,375,9-13 y,Male,1,vitamin
+292,1180,Choline,AI,mg,550,14-18 y,Male,1,vitamin
+293,1180,Choline,AI,mg,550,19-30 y,Male,1,vitamin
+294,1180,Choline,AI,mg,550,31-50 y,Male,1,vitamin
+295,1180,Choline,AI,mg,550,51-70 y,Male,1,vitamin
+296,1180,Choline,AI,mg,550,> 70 y,Male,1,vitamin
+297,1180,Choline,AI,mg,375,9-13 y,Female,1,vitamin
+298,1180,Choline,AI,mg,400,14-18 y,Female,1,vitamin
+299,1180,Choline,AI,mg,425,19-30 y,Female,1,vitamin
+300,1180,Choline,AI,mg,425,31-50 y,Female,1,vitamin
+301,1180,Choline,AI,mg,425,51-70 y,Female,1,vitamin
+302,1180,Choline,AI,mg,425,> 70 y,Female,1,vitamin
+303,1180,Choline,AI,mg,450,14-18 y,Pregnancy,1,vitamin
+304,1180,Choline,AI,mg,450,19-30 y,Pregnancy,1,vitamin
+305,1180,Choline,AI,mg,450,31-50 y,Pregnancy,1,vitamin
+306,1180,Choline,AI,mg,550,14-18 y,Lactation,1,vitamin
+307,1180,Choline,AI,mg,550,19-30 y,Lactation,1,vitamin
+308,1180,Choline,AI,mg,550,31-50 y,Lactation,1,vitamin
+309,1087,Calcium,AI,mg,200,Infant (0-6 mo),,2,element
+310,1087,Calcium,AI,mg,260,Infant (7-12 mo),,2,element
+311,1087,Calcium,RDA,mg,700,Children (1-3 y),,2,element
+312,1087,Calcium,RDA,mg,1000,Children (4-8 y),,2,element
+313,1087,Calcium,RDA,mg,1300,9-13 y,Male,2,element
+314,1087,Calcium,RDA,mg,1300,14-18 y,Male,2,element
+315,1087,Calcium,RDA,mg,1000,19-30 y,Male,2,element
+316,1087,Calcium,RDA,mg,1000,31-50 y,Male,2,element
+317,1087,Calcium,RDA,mg,1000,51-70 y,Male,2,element
+318,1087,Calcium,RDA,mg,1200,> 70 y,Male,2,element
+319,1087,Calcium,RDA,mg,1300,9-13 y,Female,2,element
+320,1087,Calcium,RDA,mg,1300,14-18 y,Female,2,element
+321,1087,Calcium,RDA,mg,1000,19-30 y,Female,2,element
+322,1087,Calcium,RDA,mg,1000,31-50 y,Female,2,element
+323,1087,Calcium,RDA,mg,1200,51-70 y,Female,2,element
+324,1087,Calcium,RDA,mg,1200,> 70 y,Female,2,element
+325,1087,Calcium,RDA,mg,1300,14-18 y,Pregnancy,2,element
+326,1087,Calcium,RDA,mg,1000,19-30 y,Pregnancy,2,element
+327,1087,Calcium,RDA,mg,1000,31-50 y,Pregnancy,2,element
+328,1087,Calcium,RDA,mg,1300,14-18 y,Lactation,2,element
+329,1087,Calcium,RDA,mg,1000,19-30 y,Lactation,2,element
+330,1087,Calcium,RDA,mg,1000,31-50 y,Lactation,2,element
+331,1096,Chromium,AI,mcg,0.2,Infant (0-6 mo),,1,element
+332,1096,Chromium,AI,mcg,5.5,Infant (7-12 mo),,1,element
+333,1096,Chromium,AI,mcg,11,Children (1-3 y),,1,element
+334,1096,Chromium,AI,mcg,15,Children (4-8 y),,1,element
+335,1096,Chromium,AI,mcg,25,9-13 y,Male,1,element
+336,1096,Chromium,AI,mcg,35,14-18 y,Male,1,element
+337,1096,Chromium,AI,mcg,35,19-30 y,Male,1,element
+338,1096,Chromium,AI,mcg,35,31-50 y,Male,1,element
+339,1096,Chromium,AI,mcg,30,51-70 y,Male,1,element
+340,1096,Chromium,AI,mcg,30,> 70 y,Male,1,element
+341,1096,Chromium,AI,mcg,21,9-13 y,Female,1,element
+342,1096,Chromium,AI,mcg,24,14-18 y,Female,1,element
+343,1096,Chromium,AI,mcg,25,19-30 y,Female,1,element
+344,1096,Chromium,AI,mcg,25,31-50 y,Female,1,element
+345,1096,Chromium,AI,mcg,20,51-70 y,Female,1,element
+346,1096,Chromium,AI,mcg,20,> 70 y,Female,1,element
+347,1096,Chromium,AI,mcg,29,14-18 y,Pregnancy,1,element
+348,1096,Chromium,AI,mcg,30,19-30 y,Pregnancy,1,element
+349,1096,Chromium,AI,mcg,30,31-50 y,Pregnancy,1,element
+350,1096,Chromium,AI,mcg,44,14-18 y,Lactation,1,element
+351,1096,Chromium,AI,mcg,45,19-30 y,Lactation,1,element
+352,1096,Chromium,AI,mcg,45,31-50 y,Lactation,1,element
+353,1098,Copper,AI,mcg,200,Infant (0-6 mo),,1,element
+354,1098,Copper,AI,mcg,220,Infant (7-12 mo),,1,element
+355,1098,Copper,DRA,mcg,340,Children (1-3 y),,1,element
+356,1098,Copper,DRA,mcg,440,Children (4-8 y),,1,element
+357,1098,Copper,DRA,mcg,700,9-13 y,Male,1,element
+358,1098,Copper,DRA,mcg,890,14-18 y,Male,1,element
+359,1098,Copper,DRA,mcg,900,19-30 y,Male,1,element
+360,1098,Copper,DRA,mcg,900,31-50 y,Male,1,element
+361,1098,Copper,DRA,mcg,900,51-70 y,Male,1,element
+362,1098,Copper,DRA,mcg,900,> 70 y,Male,1,element
+363,1098,Copper,DRA,mcg,700,9-13 y,Female,1,element
+364,1098,Copper,DRA,mcg,890,14-18 y,Female,1,element
+365,1098,Copper,DRA,mcg,900,19-30 y,Female,1,element
+366,1098,Copper,DRA,mcg,900,31-50 y,Female,1,element
+367,1098,Copper,DRA,mcg,900,51-70 y,Female,1,element
+368,1098,Copper,DRA,mcg,900,> 70 y,Female,1,element
+369,1098,Copper,DRA,mcg,1000,14-18 y,Pregnancy,1,element
+370,1098,Copper,DRA,mcg,1000,19-30 y,Pregnancy,1,element
+371,1098,Copper,DRA,mcg,1000,31-50 y,Pregnancy,1,element
+372,1098,Copper,DRA,mcg,1300,14-18 y,Lactation,1,element
+373,1098,Copper,DRA,mcg,1300,19-30 y,Lactation,1,element
+374,1098,Copper,DRA,mcg,1300,31-50 y,Lactation,1,element
+375,1099,Fluoride,AI,mg,0.01,Infant (0-6 mo),,1,element
+376,1099,Fluoride,AI,mg,0.5,Infant (7-12 mo),,1,element
+377,1099,Fluoride,AI,mg,0.7,Children (1-3 y),,1,element
+378,1099,Fluoride,AI,mg,1,Children (4-8 y),,1,element
+379,1099,Fluoride,AI,mg,2,9-13 y,Male,1,element
+380,1099,Fluoride,AI,mg,3,14-18 y,Male,1,element
+381,1099,Fluoride,AI,mg,4,19-30 y,Male,1,element
+382,1099,Fluoride,AI,mg,4,31-50 y,Male,1,element
+383,1099,Fluoride,AI,mg,4,51-70 y,Male,1,element
+384,1099,Fluoride,AI,mg,4,> 70 y,Male,1,element
+385,1099,Fluoride,AI,mg,2,9-13 y,Female,1,element
+386,1099,Fluoride,AI,mg,3,14-18 y,Female,1,element
+387,1099,Fluoride,AI,mg,3,19-30 y,Female,1,element
+388,1099,Fluoride,AI,mg,3,31-50 y,Female,1,element
+389,1099,Fluoride,AI,mg,3,51-70 y,Female,1,element
+390,1099,Fluoride,AI,mg,3,> 70 y,Female,1,element
+391,1099,Fluoride,AI,mg,3,14-18 y,Pregnancy,1,element
+392,1099,Fluoride,AI,mg,3,19-30 y,Pregnancy,1,element
+393,1099,Fluoride,AI,mg,3,31-50 y,Pregnancy,1,element
+394,1099,Fluoride,AI,mg,3,14-18 y,Lactation,1,element
+395,1099,Fluoride,AI,mg,3,19-30 y,Lactation,1,element
+396,1099,Fluoride,AI,mg,3,31-50 y,Lactation,1,element
+397,1100,Iodine,AI,mcg,110,Infant (0-6 mo),,1,element
+398,1100,Iodine,AI,mcg,130,Infant (7-12 mo),,1,element
+399,1100,Iodine,DRA,mcg,90,Children (1-3 y),,1,element
+400,1100,Iodine,DRA,mcg,90,Children (4-8 y),,1,element
+401,1100,Iodine,DRA,mcg,120,9-13 y,Male,1,element
+402,1100,Iodine,DRA,mcg,150,14-18 y,Male,1,element
+403,1100,Iodine,DRA,mcg,150,19-30 y,Male,1,element
+404,1100,Iodine,DRA,mcg,150,31-50 y,Male,1,element
+405,1100,Iodine,DRA,mcg,150,51-70 y,Male,1,element
+406,1100,Iodine,DRA,mcg,150,> 70 y,Male,1,element
+407,1100,Iodine,DRA,mcg,120,9-13 y,Female,1,element
+408,1100,Iodine,DRA,mcg,150,14-18 y,Female,1,element
+409,1100,Iodine,DRA,mcg,150,19-30 y,Female,1,element
+410,1100,Iodine,DRA,mcg,150,31-50 y,Female,1,element
+411,1100,Iodine,DRA,mcg,150,51-70 y,Female,1,element
+412,1100,Iodine,DRA,mcg,150,> 70 y,Female,1,element
+413,1100,Iodine,DRA,mcg,220,14-18 y,Pregnancy,1,element
+414,1100,Iodine,DRA,mcg,220,19-30 y,Pregnancy,1,element
+415,1100,Iodine,DRA,mcg,220,31-50 y,Pregnancy,1,element
+416,1100,Iodine,DRA,mcg,290,14-18 y,Lactation,1,element
+417,1100,Iodine,DRA,mcg,290,19-30 y,Lactation,1,element
+418,1100,Iodine,DRA,mcg,290,31-50 y,Lactation,1,element
+419,1089,Iron,AI,mg,0.27,Infant (0-6 mo),,1,element
+420,1089,Iron,DRA,mg,11,Infant (7-12 mo),,1,element
+421,1089,Iron,DRA,mg,7,Children (1-3 y),,1,element
+422,1089,Iron,DRA,mg,10,Children (4-8 y),,1,element
+423,1089,Iron,DRA,mg,8,9-13 y,Male,1,element
+424,1089,Iron,DRA,mg,11,14-18 y,Male,1,element
+425,1089,Iron,DRA,mg,8,19-30 y,Male,1,element
+426,1089,Iron,DRA,mg,8,31-50 y,Male,1,element
+427,1089,Iron,DRA,mg,8,51-70 y,Male,1,element
+428,1089,Iron,DRA,mg,8,> 70 y,Male,1,element
+429,1089,Iron,DRA,mg,8,9-13 y,Female,1,element
+430,1089,Iron,DRA,mg,15,14-18 y,Female,1,element
+431,1089,Iron,DRA,mg,18,19-30 y,Female,1,element
+432,1089,Iron,DRA,mg,18,31-50 y,Female,1,element
+433,1089,Iron,DRA,mg,8,51-70 y,Female,1,element
+434,1089,Iron,DRA,mg,8,> 70 y,Female,1,element
+435,1089,Iron,DRA,mg,27,14-18 y,Pregnancy,1,element
+436,1089,Iron,DRA,mg,27,19-30 y,Pregnancy,1,element
+437,1089,Iron,DRA,mg,27,31-50 y,Pregnancy,1,element
+438,1089,Iron,DRA,mg,10,14-18 y,Lactation,1,element
+439,1089,Iron,DRA,mg,9,19-30 y,Lactation,1,element
+440,1089,Iron,DRA,mg,9,31-50 y,Lactation,1,element
+441,1090,Magnesium,AI,mg,30,Infant (0-6 mo),,1,element
+442,1090,Magnesium,AI,mg,75,Infant (7-12 mo),,1,element
+443,1090,Magnesium,DRA,mg,80,Children (1-3 y),,1,element
+444,1090,Magnesium,DRA,mg,130,Children (4-8 y),,1,element
+445,1090,Magnesium,DRA,mg,240,9-13 y,Male,1,element
+446,1090,Magnesium,DRA,mg,410,14-18 y,Male,1,element
+447,1090,Magnesium,DRA,mg,400,19-30 y,Male,1,element
+448,1090,Magnesium,DRA,mg,420,31-50 y,Male,1,element
+449,1090,Magnesium,DRA,mg,420,51-70 y,Male,1,element
+450,1090,Magnesium,DRA,mg,420,> 70 y,Male,1,element
+451,1090,Magnesium,DRA,mg,240,9-13 y,Female,1,element
+452,1090,Magnesium,DRA,mg,360,14-18 y,Female,1,element
+453,1090,Magnesium,DRA,mg,310,19-30 y,Female,1,element
+454,1090,Magnesium,DRA,mg,320,31-50 y,Female,1,element
+455,1090,Magnesium,DRA,mg,320,51-70 y,Female,1,element
+456,1090,Magnesium,DRA,mg,320,> 70 y,Female,1,element
+457,1090,Magnesium,DRA,mg,400,14-18 y,Pregnancy,1,element
+458,1090,Magnesium,DRA,mg,350,19-30 y,Pregnancy,1,element
+459,1090,Magnesium,DRA,mg,360,31-50 y,Pregnancy,1,element
+460,1090,Magnesium,DRA,mg,360,14-18 y,Lactation,1,element
+461,1090,Magnesium,DRA,mg,310,19-30 y,Lactation,1,element
+462,1090,Magnesium,DRA,mg,320,31-50 y,Lactation,1,element
+463,1101,Manganese,AI,mg,0.003,Infant (0-6 mo),,1,element
+464,1101,Manganese,AI,mg,0.6,Infant (7-12 mo),,1,element
+465,1101,Manganese,AI,mg,1.2,Children (1-3 y),,1,element
+466,1101,Manganese,AI,mg,1.5,Children (4-8 y),,1,element
+467,1101,Manganese,AI,mg,1.9,9-13 y,Male,1,element
+468,1101,Manganese,AI,mg,2.2,14-18 y,Male,1,element
+469,1101,Manganese,AI,mg,2.3,19-30 y,Male,1,element
+470,1101,Manganese,AI,mg,2.3,31-50 y,Male,1,element
+471,1101,Manganese,AI,mg,2.3,51-70 y,Male,1,element
+472,1101,Manganese,AI,mg,2.3,> 70 y,Male,1,element
+473,1101,Manganese,AI,mg,1.6,9-13 y,Female,1,element
+474,1101,Manganese,AI,mg,1.6,14-18 y,Female,1,element
+475,1101,Manganese,AI,mg,1.8,19-30 y,Female,1,element
+476,1101,Manganese,AI,mg,1.8,31-50 y,Female,1,element
+477,1101,Manganese,AI,mg,1.8,51-70 y,Female,1,element
+478,1101,Manganese,AI,mg,1.8,> 70 y,Female,1,element
+479,1101,Manganese,AI,mg,2,14-18 y,Pregnancy,1,element
+480,1101,Manganese,AI,mg,2,19-30 y,Pregnancy,1,element
+481,1101,Manganese,AI,mg,2,31-50 y,Pregnancy,1,element
+482,1101,Manganese,AI,mg,2.6,14-18 y,Lactation,1,element
+483,1101,Manganese,AI,mg,2.6,19-30 y,Lactation,1,element
+484,1101,Manganese,AI,mg,2.6,31-50 y,Lactation,1,element
+485,1102,Molybdenum,AI,mcg,2,Infant (0-6 mo),,1,element
+486,1102,Molybdenum,AI,mcg,3,Infant (7-12 mo),,1,element
+487,1102,Molybdenum,DRA,mcg,17,Children (1-3 y),,1,element
+488,1102,Molybdenum,DRA,mcg,22,Children (4-8 y),,1,element
+489,1102,Molybdenum,DRA,mcg,34,9-13 y,Male,1,element
+490,1102,Molybdenum,DRA,mcg,43,14-18 y,Male,1,element
+491,1102,Molybdenum,DRA,mcg,45,19-30 y,Male,1,element
+492,1102,Molybdenum,DRA,mcg,45,31-50 y,Male,1,element
+493,1102,Molybdenum,DRA,mcg,45,51-70 y,Male,1,element
+494,1102,Molybdenum,DRA,mcg,45,> 70 y,Male,1,element
+495,1102,Molybdenum,DRA,mcg,34,9-13 y,Female,1,element
+496,1102,Molybdenum,DRA,mcg,43,14-18 y,Female,1,element
+497,1102,Molybdenum,DRA,mcg,45,19-30 y,Female,1,element
+498,1102,Molybdenum,DRA,mcg,45,31-50 y,Female,1,element
+499,1102,Molybdenum,DRA,mcg,45,51-70 y,Female,1,element
+500,1102,Molybdenum,DRA,mcg,45,> 70 y,Female,1,element
+501,1102,Molybdenum,DRA,mcg,50,14-18 y,Pregnancy,1,element
+502,1102,Molybdenum,DRA,mcg,50,19-30 y,Pregnancy,1,element
+503,1102,Molybdenum,DRA,mcg,50,31-50 y,Pregnancy,1,element
+504,1102,Molybdenum,DRA,mcg,50,14-18 y,Lactation,1,element
+505,1102,Molybdenum,DRA,mcg,50,19-30 y,Lactation,1,element
+506,1102,Molybdenum,DRA,mcg,50,31-50 y,Lactation,1,element
+507,1091,Phosphorus,AI,mg,100,Infant (0-6 mo),,1,element
+508,1091,Phosphorus,AI,mg,275,Infant (7-12 mo),,1,element
+509,1091,Phosphorus,DRA,mg,460,Children (1-3 y),,1,element
+510,1091,Phosphorus,DRA,mg,500,Children (4-8 y),,1,element
+511,1091,Phosphorus,DRA,mg,1250,9-13 y,Male,1,element
+512,1091,Phosphorus,DRA,mg,1250,14-18 y,Male,1,element
+513,1091,Phosphorus,DRA,mg,700,19-30 y,Male,1,element
+514,1091,Phosphorus,DRA,mg,700,31-50 y,Male,1,element
+515,1091,Phosphorus,DRA,mg,700,51-70 y,Male,1,element
+516,1091,Phosphorus,DRA,mg,700,> 70 y,Male,1,element
+517,1091,Phosphorus,DRA,mg,1250,9-13 y,Female,1,element
+518,1091,Phosphorus,DRA,mg,1250,14-18 y,Female,1,element
+519,1091,Phosphorus,DRA,mg,700,19-30 y,Female,1,element
+520,1091,Phosphorus,DRA,mg,700,31-50 y,Female,1,element
+521,1091,Phosphorus,DRA,mg,700,51-70 y,Female,1,element
+522,1091,Phosphorus,DRA,mg,700,> 70 y,Female,1,element
+523,1091,Phosphorus,DRA,mg,1250,14-18 y,Pregnancy,1,element
+524,1091,Phosphorus,DRA,mg,700,19-30 y,Pregnancy,1,element
+525,1091,Phosphorus,DRA,mg,700,31-50 y,Pregnancy,1,element
+526,1091,Phosphorus,DRA,mg,1250,14-18 y,Lactation,1,element
+527,1091,Phosphorus,DRA,mg,700,19-30 y,Lactation,1,element
+528,1091,Phosphorus,DRA,mg,700,31-50 y,Lactation,1,element
+529,1103,Selenium,AI,mcg,15,Infant (0-6 mo),,1,element
+530,1103,Selenium,AI,mcg,20,Infant (7-12 mo),,1,element
+531,1103,Selenium,DRA,mcg,20,Children (1-3 y),,1,element
+532,1103,Selenium,DRA,mcg,30,Children (4-8 y),,1,element
+533,1103,Selenium,DRA,mcg,40,9-13 y,Male,1,element
+534,1103,Selenium,DRA,mcg,55,14-18 y,Male,1,element
+535,1103,Selenium,DRA,mcg,55,19-30 y,Male,1,element
+536,1103,Selenium,DRA,mcg,55,31-50 y,Male,1,element
+537,1103,Selenium,DRA,mcg,55,51-70 y,Male,1,element
+538,1103,Selenium,DRA,mcg,55,> 70 y,Male,1,element
+539,1103,Selenium,DRA,mcg,40,9-13 y,Female,1,element
+540,1103,Selenium,DRA,mcg,55,14-18 y,Female,1,element
+541,1103,Selenium,DRA,mcg,55,19-30 y,Female,1,element
+542,1103,Selenium,DRA,mcg,55,31-50 y,Female,1,element
+543,1103,Selenium,DRA,mcg,55,51-70 y,Female,1,element
+544,1103,Selenium,DRA,mcg,55,> 70 y,Female,1,element
+545,1103,Selenium,DRA,mcg,60,14-18 y,Pregnancy,1,element
+546,1103,Selenium,DRA,mcg,60,19-30 y,Pregnancy,1,element
+547,1103,Selenium,DRA,mcg,60,31-50 y,Pregnancy,1,element
+548,1103,Selenium,DRA,mcg,70,14-18 y,Lactation,1,element
+549,1103,Selenium,DRA,mcg,70,19-30 y,Lactation,1,element
+550,1103,Selenium,DRA,mcg,70,31-50 y,Lactation,1,element
+551,1095,Zinc,AI,mg,2,Infant (0-6 mo),,1,element
+552,1095,Zinc,DRA,mg,3,Infant (7-12 mo),,1,element
+553,1095,Zinc,DRA,mg,3,Children (1-3 y),,1,element
+554,1095,Zinc,DRA,mg,5,Children (4-8 y),,1,element
+555,1095,Zinc,DRA,mg,8,9-13 y,Male,1,element
+556,1095,Zinc,DRA,mg,11,14-18 y,Male,1,element
+557,1095,Zinc,DRA,mg,11,19-30 y,Male,1,element
+558,1095,Zinc,DRA,mg,11,31-50 y,Male,1,element
+559,1095,Zinc,DRA,mg,11,51-70 y,Male,1,element
+560,1095,Zinc,DRA,mg,11,> 70 y,Male,1,element
+561,1095,Zinc,DRA,mg,8,9-13 y,Female,1,element
+562,1095,Zinc,DRA,mg,9,14-18 y,Female,1,element
+563,1095,Zinc,DRA,mg,8,19-30 y,Female,1,element
+564,1095,Zinc,DRA,mg,8,31-50 y,Female,1,element
+565,1095,Zinc,DRA,mg,8,51-70 y,Female,1,element
+566,1095,Zinc,DRA,mg,8,> 70 y,Female,1,element
+567,1095,Zinc,DRA,mg,12,14-18 y,Pregnancy,1,element
+568,1095,Zinc,DRA,mg,11,19-30 y,Pregnancy,1,element
+569,1095,Zinc,DRA,mg,11,31-50 y,Pregnancy,1,element
+570,1095,Zinc,DRA,mg,13,14-18 y,Lactation,1,element
+571,1095,Zinc,DRA,mg,12,19-30 y,Lactation,1,element
+572,1095,Zinc,DRA,mg,12,31-50 y,Lactation,1,element
+573,1092,Potassium,AI,mg,400,Infant (0-6 mo),,3,element
+574,1092,Potassium,AI,mg,860,Infant (7-12 mo),,3,element
+575,1092,Potassium,AI,mg,2000,Children (1-3 y),,3,element
+576,1092,Potassium,AI,mg,2300,Children (4-8 y),,3,element
+577,1092,Potassium,AI,mg,2500,9-13 y,Male,3,element
+578,1092,Potassium,AI,mg,3000,14-18 y,Male,3,element
+579,1092,Potassium,AI,mg,3400,19-30 y,Male,3,element
+580,1092,Potassium,AI,mg,3400,31-50 y,Male,3,element
+581,1092,Potassium,AI,mg,3400,51-70 y,Male,3,element
+582,1092,Potassium,AI,mg,3400,> 70 y,Male,3,element
+583,1092,Potassium,AI,mg,2300,9-13 y,Female,3,element
+584,1092,Potassium,AI,mg,2300,14-18 y,Female,3,element
+585,1092,Potassium,AI,mg,2600,19-30 y,Female,3,element
+586,1092,Potassium,AI,mg,2600,31-50 y,Female,3,element
+587,1092,Potassium,AI,mg,2600,51-70 y,Female,3,element
+588,1092,Potassium,AI,mg,2600,> 70 y,Female,3,element
+589,1092,Potassium,AI,mg,2600,14-18 y,Pregnancy,3,element
+590,1092,Potassium,AI,mg,2900,19-30 y,Pregnancy,3,element
+591,1092,Potassium,AI,mg,2900,31-50 y,Pregnancy,3,element
+592,1092,Potassium,AI,mg,2500,14-18 y,Lactation,3,element
+593,1092,Potassium,AI,mg,2800,19-30 y,Lactation,3,element
+594,1092,Potassium,AI,mg,2800,31-50 y,Lactation,3,element
+595,1093,Sodium,AI,mg,110,Infant (0-6 mo),,3,element
+596,1093,Sodium,AI,mg,370,Infant (7-12 mo),,3,element
+597,1093,Sodium,AI,mg,800,Children (1-3 y),,3,element
+598,1093,Sodium,AI,mg,1000,Children (4-8 y),,3,element
+599,1093,Sodium,AI,mg,1200,9-13 y,Male,3,element
+600,1093,Sodium,AI,mg,1500,14-18 y,Male,3,element
+601,1093,Sodium,AI,mg,1500,19-30 y,Male,3,element
+602,1093,Sodium,AI,mg,1500,31-50 y,Male,3,element
+603,1093,Sodium,AI,mg,1500,51-70 y,Male,3,element
+604,1093,Sodium,AI,mg,1500,> 70 y,Male,3,element
+605,1093,Sodium,AI,mg,1200,9-13 y,Female,3,element
+606,1093,Sodium,AI,mg,1500,14-18 y,Female,3,element
+607,1093,Sodium,AI,mg,1500,19-30 y,Female,3,element
+608,1093,Sodium,AI,mg,1500,31-50 y,Female,3,element
+609,1093,Sodium,AI,mg,1500,51-70 y,Female,3,element
+610,1093,Sodium,AI,mg,1500,> 70 y,Female,3,element
+611,1093,Sodium,AI,mg,1500,14-18 y,Pregnancy,3,element
+612,1093,Sodium,AI,mg,1500,19-30 y,Pregnancy,3,element
+613,1093,Sodium,AI,mg,1500,31-50 y,Pregnancy,3,element
+614,1093,Sodium,AI,mg,1500,14-18 y,Lactation,3,element
+615,1093,Sodium,AI,mg,1500,19-30 y,Lactation,3,element
+616,1093,Sodium,AI,mg,1500,31-50 y,Lactation,3,element
+617,,Chloride,AI,g,0.18,Infant (0-6 mo),,1,element
+618,,Chloride,AI,g,0.57,Infant (7-12 mo),,1,element
+619,,Chloride,AI,g,1.5,Children (1-3 y),,1,element
+620,,Chloride,AI,g,1.9,Children (4-8 y),,1,element
+621,,Chloride,AI,g,2.3,9-13 y,Male,1,element
+622,,Chloride,AI,g,2.3,14-18 y,Male,1,element
+623,,Chloride,AI,g,2.3,19-30 y,Male,1,element
+624,,Chloride,AI,g,2.3,31-50 y,Male,1,element
+625,,Chloride,AI,g,2,51-70 y,Male,1,element
+626,,Chloride,AI,g,1.8,> 70 y,Male,1,element
+627,,Chloride,AI,g,2.3,9-13 y,Female,1,element
+628,,Chloride,AI,g,2.3,14-18 y,Female,1,element
+629,,Chloride,AI,g,2.3,19-30 y,Female,1,element
+630,,Chloride,AI,g,2.3,31-50 y,Female,1,element
+631,,Chloride,AI,g,2,51-70 y,Female,1,element
+632,,Chloride,AI,g,1.8,> 70 y,Female,1,element
+633,,Chloride,AI,g,2.3,14-18 y,Pregnancy,1,element
+634,,Chloride,AI,g,2.3,19-30 y,Pregnancy,1,element
+635,,Chloride,AI,g,2.3,31-50 y,Pregnancy,1,element
+636,,Chloride,AI,g,2.3,14-18 y,Lactation,1,element
+637,,Chloride,AI,g,2.3,19-30 y,Lactation,1,element
+638,,Chloride,AI,g,2.3,31-50 y,Lactation,1,element
+639,1051,Water,AI,L,0.7,Infant (0-6 mo),,1,macronutrient
+640,1051,Water,AI,L,0.8,Infant (7-12 mo),,1,macronutrient
+641,1051,Water,AI,L,1.3,Children (1-3 y),,1,macronutrient
+642,1051,Water,AI,L,1.7,Children (4-8 y),,1,macronutrient
+643,1051,Water,AI,L,2.4,9-13 y,Male,1,macronutrient
+644,1051,Water,AI,L,3.3,14-18 y,Male,1,macronutrient
+645,1051,Water,AI,L,3.7,19-30 y,Male,1,macronutrient
+646,1051,Water,AI,L,3.7,31-50 y,Male,1,macronutrient
+647,1051,Water,AI,L,3.7,51-70 y,Male,1,macronutrient
+648,1051,Water,AI,L,3.7,> 70 y,Male,1,macronutrient
+649,1051,Water,AI,L,2.1,9-13 y,Female,1,macronutrient
+650,1051,Water,AI,L,2.3,14-18 y,Female,1,macronutrient
+651,1051,Water,AI,L,2.7,19-30 y,Female,1,macronutrient
+652,1051,Water,AI,L,2.7,31-50 y,Female,1,macronutrient
+653,1051,Water,AI,L,2.7,51-70 y,Female,1,macronutrient
+654,1051,Water,AI,L,2.7,> 70 y,Female,1,macronutrient
+655,1051,Water,AI,L,3,14-18 y,Pregnancy,1,macronutrient
+656,1051,Water,AI,L,3,19-30 y,Pregnancy,1,macronutrient
+657,1051,Water,AI,L,3,31-50 y,Pregnancy,1,macronutrient
+658,1051,Water,AI,L,3.8,14-18 y,Lactation,1,macronutrient
+659,1051,Water,AI,L,3.8,19-30 y,Lactation,1,macronutrient
+660,1051,Water,AI,L,3.8,31-50 y,Lactation,1,macronutrient
+661,1005,Carbohydrate,AI,g,60,Infant (0-6 mo),,1,macronutrient
+662,1005,Carbohydrate,AI,g,95,Infant (7-12 mo),,1,macronutrient
+663,1005,Carbohydrate,RDA,g,130,Children (1-3 y),,1,macronutrient
+664,1005,Carbohydrate,RDA,g,130,Children (4-8 y),,1,macronutrient
+665,1005,Carbohydrate,RDA,g,130,9-13 y,Male,1,macronutrient
+666,1005,Carbohydrate,RDA,g,130,14-18 y,Male,1,macronutrient
+667,1005,Carbohydrate,RDA,g,130,19-30 y,Male,1,macronutrient
+668,1005,Carbohydrate,RDA,g,130,31-50 y,Male,1,macronutrient
+669,1005,Carbohydrate,RDA,g,130,51-70 y,Male,1,macronutrient
+670,1005,Carbohydrate,RDA,g,130,> 70 y,Male,1,macronutrient
+671,1005,Carbohydrate,RDA,g,130,9-13 y,Female,1,macronutrient
+672,1005,Carbohydrate,RDA,g,130,14-18 y,Female,1,macronutrient
+673,1005,Carbohydrate,RDA,g,130,19-30 y,Female,1,macronutrient
+674,1005,Carbohydrate,RDA,g,130,31-50 y,Female,1,macronutrient
+675,1005,Carbohydrate,RDA,g,130,51-70 y,Female,1,macronutrient
+676,1005,Carbohydrate,RDA,g,130,> 70 y,Female,1,macronutrient
+677,1005,Carbohydrate,RDA,g,175,14-18 y,Pregnancy,1,macronutrient
+678,1005,Carbohydrate,RDA,g,175,19-30 y,Pregnancy,1,macronutrient
+679,1005,Carbohydrate,RDA,g,175,31-50 y,Pregnancy,1,macronutrient
+680,1005,Carbohydrate,RDA,g,210,14-18 y,Lactation,1,macronutrient
+681,1005,Carbohydrate,RDA,g,210,19-30 y,Lactation,1,macronutrient
+682,1005,Carbohydrate,RDA,g,210,31-50 y,Lactation,1,macronutrient
+683,1079,Total Fiber,AI,g,ND,Infant (0-6 mo),,1,macronutrient
+684,1079,Total Fiber,AI,g,ND,Infant (7-12 mo),,1,macronutrient
+685,1079,Total Fiber,AI,g,19,Children (1-3 y),,1,macronutrient
+686,1079,Total Fiber,AI,g,25,Children (4-8 y),,1,macronutrient
+687,1079,Total Fiber,AI,g,31,9-13 y,Male,1,macronutrient
+688,1079,Total Fiber,AI,g,38,14-18 y,Male,1,macronutrient
+689,1079,Total Fiber,AI,g,38,19-30 y,Male,1,macronutrient
+690,1079,Total Fiber,AI,g,38,31-50 y,Male,1,macronutrient
+691,1079,Total Fiber,AI,g,30,51-70 y,Male,1,macronutrient
+692,1079,Total Fiber,AI,g,30,> 70 y,Male,1,macronutrient
+693,1079,Total Fiber,AI,g,26,9-13 y,Female,1,macronutrient
+694,1079,Total Fiber,AI,g,26,14-18 y,Female,1,macronutrient
+695,1079,Total Fiber,AI,g,25,19-30 y,Female,1,macronutrient
+696,1079,Total Fiber,AI,g,25,31-50 y,Female,1,macronutrient
+697,1079,Total Fiber,AI,g,21,51-70 y,Female,1,macronutrient
+698,1079,Total Fiber,AI,g,21,> 70 y,Female,1,macronutrient
+699,1079,Total Fiber,AI,g,28,14-18 y,Pregnancy,1,macronutrient
+700,1079,Total Fiber,AI,g,28,19-30 y,Pregnancy,1,macronutrient
+701,1079,Total Fiber,AI,g,28,31-50 y,Pregnancy,1,macronutrient
+702,1079,Total Fiber,AI,g,29,14-18 y,Lactation,1,macronutrient
+703,1079,Total Fiber,AI,g,29,19-30 y,Lactation,1,macronutrient
+704,1079,Total Fiber,AI,g,29,31-50 y,Lactation,1,macronutrient
+705,1004,Fat,AI,g,31,Infant (0-6 mo),,1,macronutrient
+706,1004,Fat,AI,g,30,Infant (7-12 mo),,1,macronutrient
+707,1004,Fat,AI,g,ND,Children (1-3 y),,1,macronutrient
+708,1004,Fat,AI,g,ND,Children (4-8 y),,1,macronutrient
+709,1004,Fat,AI,g,ND,9-13 y,Male,1,macronutrient
+710,1004,Fat,AI,g,ND,14-18 y,Male,1,macronutrient
+711,1004,Fat,AI,g,ND,19-30 y,Male,1,macronutrient
+712,1004,Fat,AI,g,ND,31-50 y,Male,1,macronutrient
+713,1004,Fat,AI,g,ND,51-70 y,Male,1,macronutrient
+714,1004,Fat,AI,g,ND,> 70 y,Male,1,macronutrient
+715,1004,Fat,AI,g,ND,9-13 y,Female,1,macronutrient
+716,1004,Fat,AI,g,ND,14-18 y,Female,1,macronutrient
+717,1004,Fat,AI,g,ND,19-30 y,Female,1,macronutrient
+718,1004,Fat,AI,g,ND,31-50 y,Female,1,macronutrient
+719,1004,Fat,AI,g,ND,51-70 y,Female,1,macronutrient
+720,1004,Fat,AI,g,ND,> 70 y,Female,1,macronutrient
+721,1004,Fat,AI,g,ND,14-18 y,Pregnancy,1,macronutrient
+722,1004,Fat,AI,g,ND,19-30 y,Pregnancy,1,macronutrient
+723,1004,Fat,AI,g,ND,31-50 y,Pregnancy,1,macronutrient
+724,1004,Fat,AI,g,ND,14-18 y,Lactation,1,macronutrient
+725,1004,Fat,AI,g,ND,19-30 y,Lactation,1,macronutrient
+726,1004,Fat,AI,g,ND,31-50 y,Lactation,1,macronutrient
+727,1269,Linoleic Acid,AI,g,4.4,Infant (0-6 mo),,1,macronutrient
+728,1269,Linoleic Acid,AI,g,4.6,Infant (7-12 mo),,1,macronutrient
+729,1269,Linoleic Acid,AI,g,7,Children (1-3 y),,1,macronutrient
+730,1269,Linoleic Acid,AI,g,10,Children (4-8 y),,1,macronutrient
+731,1269,Linoleic Acid,AI,g,12,9-13 y,Male,1,macronutrient
+732,1269,Linoleic Acid,AI,g,16,14-18 y,Male,1,macronutrient
+733,1269,Linoleic Acid,AI,g,17,19-30 y,Male,1,macronutrient
+734,1269,Linoleic Acid,AI,g,17,31-50 y,Male,1,macronutrient
+735,1269,Linoleic Acid,AI,g,14,51-70 y,Male,1,macronutrient
+736,1269,Linoleic Acid,AI,g,14,> 70 y,Male,1,macronutrient
+737,1269,Linoleic Acid,AI,g,10,9-13 y,Female,1,macronutrient
+738,1269,Linoleic Acid,AI,g,11,14-18 y,Female,1,macronutrient
+739,1269,Linoleic Acid,AI,g,12,19-30 y,Female,1,macronutrient
+740,1269,Linoleic Acid,AI,g,12,31-50 y,Female,1,macronutrient
+741,1269,Linoleic Acid,AI,g,11,51-70 y,Female,1,macronutrient
+742,1269,Linoleic Acid,AI,g,11,> 70 y,Female,1,macronutrient
+743,1269,Linoleic Acid,AI,g,13,14-18 y,Pregnancy,1,macronutrient
+744,1269,Linoleic Acid,AI,g,13,19-30 y,Pregnancy,1,macronutrient
+745,1269,Linoleic Acid,AI,g,13,31-50 y,Pregnancy,1,macronutrient
+746,1269,Linoleic Acid,AI,g,13,14-18 y,Lactation,1,macronutrient
+747,1269,Linoleic Acid,AI,g,13,19-30 y,Lactation,1,macronutrient
+748,1269,Linoleic Acid,AI,g,13,31-50 y,Lactation,1,macronutrient
+749,1270,alpha-Linolenic Acid,AI,g,0.5,Infant (0-6 mo),,1,macronutrient
+750,1270,alpha-Linolenic Acid,AI,g,0.5,Infant (7-12 mo),,1,macronutrient
+751,1270,alpha-Linolenic Acid,AI,g,0.7,Children (1-3 y),,1,macronutrient
+752,1270,alpha-Linolenic Acid,AI,g,0.9,Children (4-8 y),,1,macronutrient
+753,1270,alpha-Linolenic Acid,AI,g,1.2,9-13 y,Male,1,macronutrient
+754,1270,alpha-Linolenic Acid,AI,g,1.6,14-18 y,Male,1,macronutrient
+755,1270,alpha-Linolenic Acid,AI,g,1.6,19-30 y,Male,1,macronutrient
+756,1270,alpha-Linolenic Acid,AI,g,1.6,31-50 y,Male,1,macronutrient
+757,1270,alpha-Linolenic Acid,AI,g,1.6,51-70 y,Male,1,macronutrient
+758,1270,alpha-Linolenic Acid,AI,g,1.6,> 70 y,Male,1,macronutrient
+759,1270,alpha-Linolenic Acid,AI,g,1,9-13 y,Female,1,macronutrient
+760,1270,alpha-Linolenic Acid,AI,g,1.1,14-18 y,Female,1,macronutrient
+761,1270,alpha-Linolenic Acid,AI,g,1.1,19-30 y,Female,1,macronutrient
+762,1270,alpha-Linolenic Acid,AI,g,1.1,31-50 y,Female,1,macronutrient
+763,1270,alpha-Linolenic Acid,AI,g,1.1,51-70 y,Female,1,macronutrient
+764,1270,alpha-Linolenic Acid,AI,g,1.1,> 70 y,Female,1,macronutrient
+765,1270,alpha-Linolenic Acid,AI,g,1.4,14-18 y,Pregnancy,1,macronutrient
+766,1270,alpha-Linolenic Acid,AI,g,1.4,19-30 y,Pregnancy,1,macronutrient
+767,1270,alpha-Linolenic Acid,AI,g,1.4,31-50 y,Pregnancy,1,macronutrient
+768,1270,alpha-Linolenic Acid,AI,g,1.3,14-18 y,Lactation,1,macronutrient
+769,1270,alpha-Linolenic Acid,AI,g,1.3,19-30 y,Lactation,1,macronutrient
+770,1270,alpha-Linolenic Acid,AI,g,1.3,31-50 y,Lactation,1,macronutrient
+771,1003,Protein,AI,g,9.1,Infant (0-6 mo),,1,macronutrient
+772,1003,Protein,RDA,g,11,Infant (7-12 mo),,1,macronutrient
+773,1003,Protein,RDA,g,13,Children (1-3 y),,1,macronutrient
+774,1003,Protein,RDA,g,19,Children (4-8 y),,1,macronutrient
+775,1003,Protein,RDA,g,34,9-13 y,Male,1,macronutrient
+776,1003,Protein,RDA,g,52,14-18 y,Male,1,macronutrient
+777,1003,Protein,RDA,g,56,19-30 y,Male,1,macronutrient
+778,1003,Protein,RDA,g,56,31-50 y,Male,1,macronutrient
+779,1003,Protein,RDA,g,56,51-70 y,Male,1,macronutrient
+780,1003,Protein,RDA,g,56,> 70 y,Male,1,macronutrient
+781,1003,Protein,RDA,g,34,9-13 y,Female,1,macronutrient
+782,1003,Protein,RDA,g,46,14-18 y,Female,1,macronutrient
+783,1003,Protein,RDA,g,46,19-30 y,Female,1,macronutrient
+784,1003,Protein,RDA,g,46,31-50 y,Female,1,macronutrient
+785,1003,Protein,RDA,g,46,51-70 y,Female,1,macronutrient
+786,1003,Protein,RDA,g,46,> 70 y,Female,1,macronutrient
+787,1003,Protein,RDA,g,71,14-18 y,Pregnancy,1,macronutrient
+788,1003,Protein,RDA,g,71,19-30 y,Pregnancy,1,macronutrient
+789,1003,Protein,RDA,g,71,31-50 y,Pregnancy,1,macronutrient
+790,1003,Protein,RDA,g,71,14-18 y,Lactation,1,macronutrient
+791,1003,Protein,RDA,g,71,19-30 y,Lactation,1,macronutrient
+792,1003,Protein,RDA,g,71,31-50 y,Lactation,1,macronutrient
+793,1221,Histidine,AI,mg/kg,36,Infant (0-6 mo),,1,aminoacid
+794,1221,Histidine,RDA,mg/kg,32,Infant (7-12 mo),,1,aminoacid
+795,1221,Histidine,RDA,mg/kg,21,Children (1-3 y),,1,aminoacid
+796,1221,Histidine,RDA,mg/kg,16,Children (4-8 y),,1,aminoacid
+797,1221,Histidine,RDA,mg/kg,17,9-13 y,Male,1,aminoacid
+798,1221,Histidine,RDA,mg/kg,15,14-18 y,Male,1,aminoacid
+799,1221,Histidine,RDA,mg/kg,14,19-30 y,Male,1,aminoacid
+800,1221,Histidine,RDA,mg/kg,14,31-50 y,Male,1,aminoacid
+801,1221,Histidine,RDA,mg/kg,14,51-70 y,Male,1,aminoacid
+802,1221,Histidine,RDA,mg/kg,14,> 70 y,Male,1,aminoacid
+803,1221,Histidine,RDA,mg/kg,15,9-13 y,Female,1,aminoacid
+804,1221,Histidine,RDA,mg/kg,14,14-18 y,Female,1,aminoacid
+805,1221,Histidine,RDA,mg/kg,14,19-30 y,Female,1,aminoacid
+806,1221,Histidine,RDA,mg/kg,14,31-50 y,Female,1,aminoacid
+807,1221,Histidine,RDA,mg/kg,14,51-70 y,Female,1,aminoacid
+808,1221,Histidine,RDA,mg/kg,14,> 70 y,Female,1,aminoacid
+809,1221,Histidine,RDA,mg/kg,18,14-18 y,Pregnancy,1,aminoacid
+810,1221,Histidine,RDA,mg/kg,18,19-30 y,Pregnancy,1,aminoacid
+811,1221,Histidine,RDA,mg/kg,18,31-50 y,Pregnancy,1,aminoacid
+812,1221,Histidine,RDA,mg/kg,19,14-18 y,Lactation,1,aminoacid
+813,1221,Histidine,RDA,mg/kg,19,19-30 y,Lactation,1,aminoacid
+814,1221,Histidine,RDA,mg/kg,19,31-50 y,Lactation,1,aminoacid
+815,1212,Isoleucine,AI,mg/kg,88,Infant (0-6 mo),,1,aminoacid
+816,1212,Isoleucine,RDA,mg/kg,43,Infant (7-12 mo),,1,aminoacid
+817,1212,Isoleucine,RDA,mg/kg,28,Children (1-3 y),,1,aminoacid
+818,1212,Isoleucine,RDA,mg/kg,22,Children (4-8 y),,1,aminoacid
+819,1212,Isoleucine,RDA,mg/kg,22,9-13 y,Male,1,aminoacid
+820,1212,Isoleucine,RDA,mg/kg,21,14-18 y,Male,1,aminoacid
+821,1212,Isoleucine,RDA,mg/kg,19,19-30 y,Male,1,aminoacid
+822,1212,Isoleucine,RDA,mg/kg,19,31-50 y,Male,1,aminoacid
+823,1212,Isoleucine,RDA,mg/kg,19,51-70 y,Male,1,aminoacid
+824,1212,Isoleucine,RDA,mg/kg,19,> 70 y,Male,1,aminoacid
+825,1212,Isoleucine,RDA,mg/kg,21,9-13 y,Female,1,aminoacid
+826,1212,Isoleucine,RDA,mg/kg,19,14-18 y,Female,1,aminoacid
+827,1212,Isoleucine,RDA,mg/kg,19,19-30 y,Female,1,aminoacid
+828,1212,Isoleucine,RDA,mg/kg,19,31-50 y,Female,1,aminoacid
+829,1212,Isoleucine,RDA,mg/kg,19,51-70 y,Female,1,aminoacid
+830,1212,Isoleucine,RDA,mg/kg,19,> 70 y,Female,1,aminoacid
+831,1212,Isoleucine,RDA,mg/kg,25,14-18 y,Pregnancy,1,aminoacid
+832,1212,Isoleucine,RDA,mg/kg,25,19-30 y,Pregnancy,1,aminoacid
+833,1212,Isoleucine,RDA,mg/kg,25,31-50 y,Pregnancy,1,aminoacid
+834,1212,Isoleucine,RDA,mg/kg,30,14-18 y,Lactation,1,aminoacid
+835,1212,Isoleucine,RDA,mg/kg,30,19-30 y,Lactation,1,aminoacid
+836,1212,Isoleucine,RDA,mg/kg,30,31-50 y,Lactation,1,aminoacid
+837,1213,Leucine,AI,mg/kg,156,Infant (0-6 mo),,1,aminoacid
+838,1213,Leucine,RDA,mg/kg,93,Infant (7-12 mo),,1,aminoacid
+839,1213,Leucine,RDA,mg/kg,63,Children (1-3 y),,1,aminoacid
+840,1213,Leucine,RDA,mg/kg,49,Children (4-8 y),,1,aminoacid
+841,1213,Leucine,RDA,mg/kg,49,9-13 y,Male,1,aminoacid
+842,1213,Leucine,RDA,mg/kg,47,14-18 y,Male,1,aminoacid
+843,1213,Leucine,RDA,mg/kg,42,19-30 y,Male,1,aminoacid
+844,1213,Leucine,RDA,mg/kg,42,31-50 y,Male,1,aminoacid
+845,1213,Leucine,RDA,mg/kg,42,51-70 y,Male,1,aminoacid
+846,1213,Leucine,RDA,mg/kg,42,> 70 y,Male,1,aminoacid
+847,1213,Leucine,RDA,mg/kg,47,9-13 y,Female,1,aminoacid
+848,1213,Leucine,RDA,mg/kg,44,14-18 y,Female,1,aminoacid
+849,1213,Leucine,RDA,mg/kg,42,19-30 y,Female,1,aminoacid
+850,1213,Leucine,RDA,mg/kg,42,31-50 y,Female,1,aminoacid
+851,1213,Leucine,RDA,mg/kg,42,51-70 y,Female,1,aminoacid
+852,1213,Leucine,RDA,mg/kg,42,> 70 y,Female,1,aminoacid
+853,1213,Leucine,RDA,mg/kg,56,14-18 y,Pregnancy,1,aminoacid
+854,1213,Leucine,RDA,mg/kg,56,19-30 y,Pregnancy,1,aminoacid
+855,1213,Leucine,RDA,mg/kg,56,31-50 y,Pregnancy,1,aminoacid
+856,1213,Leucine,RDA,mg/kg,62,14-18 y,Lactation,1,aminoacid
+857,1213,Leucine,RDA,mg/kg,62,19-30 y,Lactation,1,aminoacid
+858,1213,Leucine,RDA,mg/kg,62,31-50 y,Lactation,1,aminoacid
+859,1214,Lysine,AI,mg/kg,107,Infant (0-6 mo),,1,aminoacid
+860,1214,Lysine,RDA,mg/kg,89,Infant (7-12 mo),,1,aminoacid
+861,1214,Lysine,RDA,mg/kg,58,Children (1-3 y),,1,aminoacid
+862,1214,Lysine,RDA,mg/kg,46,Children (4-8 y),,1,aminoacid
+863,1214,Lysine,RDA,mg/kg,46,9-13 y,Male,1,aminoacid
+864,1214,Lysine,RDA,mg/kg,43,14-18 y,Male,1,aminoacid
+865,1214,Lysine,RDA,mg/kg,38,19-30 y,Male,1,aminoacid
+866,1214,Lysine,RDA,mg/kg,38,31-50 y,Male,1,aminoacid
+867,1214,Lysine,RDA,mg/kg,38,51-70 y,Male,1,aminoacid
+868,1214,Lysine,RDA,mg/kg,38,> 70 y,Male,1,aminoacid
+869,1214,Lysine,RDA,mg/kg,43,9-13 y,Female,1,aminoacid
+870,1214,Lysine,RDA,mg/kg,40,14-18 y,Female,1,aminoacid
+871,1214,Lysine,RDA,mg/kg,38,19-30 y,Female,1,aminoacid
+872,1214,Lysine,RDA,mg/kg,38,31-50 y,Female,1,aminoacid
+873,1214,Lysine,RDA,mg/kg,38,51-70 y,Female,1,aminoacid
+874,1214,Lysine,RDA,mg/kg,38,> 70 y,Female,1,aminoacid
+875,1214,Lysine,RDA,mg/kg,51,14-18 y,Pregnancy,1,aminoacid
+876,1214,Lysine,RDA,mg/kg,51,19-30 y,Pregnancy,1,aminoacid
+877,1214,Lysine,RDA,mg/kg,51,31-50 y,Pregnancy,1,aminoacid
+878,1214,Lysine,RDA,mg/kg,52,14-18 y,Lactation,1,aminoacid
+879,1214,Lysine,RDA,mg/kg,52,19-30 y,Lactation,1,aminoacid
+880,1214,Lysine,RDA,mg/kg,52,31-50 y,Lactation,1,aminoacid
+881,1215,Methionine,AI,mg/kg,59,Infant (0-6 mo),,1,aminoacid
+882,1215,Methionine,RDA,mg/kg,43,Infant (7-12 mo),,1,aminoacid
+883,1215,Methionine,RDA,mg/kg,28,Children (1-3 y),,1,aminoacid
+884,1215,Methionine,RDA,mg/kg,22,Children (4-8 y),,1,aminoacid
+885,1215,Methionine,RDA,mg/kg,22,9-13 y,Male,1,aminoacid
+886,1215,Methionine,RDA,mg/kg,21,14-18 y,Male,1,aminoacid
+887,1215,Methionine,RDA,mg/kg,19,19-30 y,Male,1,aminoacid
+888,1215,Methionine,RDA,mg/kg,19,31-50 y,Male,1,aminoacid
+889,1215,Methionine,RDA,mg/kg,19,51-70 y,Male,1,aminoacid
+890,1215,Methionine,RDA,mg/kg,19,> 70 y,Male,1,aminoacid
+891,1215,Methionine,RDA,mg/kg,21,9-13 y,Female,1,aminoacid
+892,1215,Methionine,RDA,mg/kg,19,14-18 y,Female,1,aminoacid
+893,1215,Methionine,RDA,mg/kg,19,19-30 y,Female,1,aminoacid
+894,1215,Methionine,RDA,mg/kg,19,31-50 y,Female,1,aminoacid
+895,1215,Methionine,RDA,mg/kg,19,51-70 y,Female,1,aminoacid
+896,1215,Methionine,RDA,mg/kg,19,> 70 y,Female,1,aminoacid
+897,1215,Methionine,RDA,mg/kg,25,14-18 y,Pregnancy,1,aminoacid
+898,1215,Methionine,RDA,mg/kg,25,19-30 y,Pregnancy,1,aminoacid
+899,1215,Methionine,RDA,mg/kg,25,31-50 y,Pregnancy,1,aminoacid
+900,1215,Methionine,RDA,mg/kg,26,14-18 y,Lactation,1,aminoacid
+901,1215,Methionine,RDA,mg/kg,26,19-30 y,Lactation,1,aminoacid
+902,1215,Methionine,RDA,mg/kg,26,31-50 y,Lactation,1,aminoacid
+903,1232,Cysteine,AI,mg/kg,59,Infant (0-6 mo),,1,aminoacid
+904,1232,Cysteine,RDA,mg/kg,43,Infant (7-12 mo),,1,aminoacid
+905,1232,Cysteine,RDA,mg/kg,28,Children (1-3 y),,1,aminoacid
+906,1232,Cysteine,RDA,mg/kg,22,Children (4-8 y),,1,aminoacid
+907,1232,Cysteine,RDA,mg/kg,22,9-13 y,Male,1,aminoacid
+908,1232,Cysteine,RDA,mg/kg,21,14-18 y,Male,1,aminoacid
+909,1232,Cysteine,RDA,mg/kg,19,19-30 y,Male,1,aminoacid
+910,1232,Cysteine,RDA,mg/kg,19,31-50 y,Male,1,aminoacid
+911,1232,Cysteine,RDA,mg/kg,19,51-70 y,Male,1,aminoacid
+912,1232,Cysteine,RDA,mg/kg,19,> 70 y,Male,1,aminoacid
+913,1232,Cysteine,RDA,mg/kg,21,9-13 y,Female,1,aminoacid
+914,1232,Cysteine,RDA,mg/kg,19,14-18 y,Female,1,aminoacid
+915,1232,Cysteine,RDA,mg/kg,19,19-30 y,Female,1,aminoacid
+916,1232,Cysteine,RDA,mg/kg,19,31-50 y,Female,1,aminoacid
+917,1232,Cysteine,RDA,mg/kg,19,51-70 y,Female,1,aminoacid
+918,1232,Cysteine,RDA,mg/kg,19,> 70 y,Female,1,aminoacid
+919,1232,Cysteine,RDA,mg/kg,25,14-18 y,Pregnancy,1,aminoacid
+920,1232,Cysteine,RDA,mg/kg,25,19-30 y,Pregnancy,1,aminoacid
+921,1232,Cysteine,RDA,mg/kg,25,31-50 y,Pregnancy,1,aminoacid
+922,1232,Cysteine,RDA,mg/kg,26,14-18 y,Lactation,1,aminoacid
+923,1232,Cysteine,RDA,mg/kg,26,19-30 y,Lactation,1,aminoacid
+924,1232,Cysteine,RDA,mg/kg,26,31-50 y,Lactation,1,aminoacid
+925,1217,Phenylalanine,AI,mg/kg,135,Infant (0-6 mo),,1,aminoacid
+926,1217,Phenylalanine,RDA,mg/kg,84,Infant (7-12 mo),,1,aminoacid
+927,1217,Phenylalanine,RDA,mg/kg,54,Children (1-3 y),,1,aminoacid
+928,1217,Phenylalanine,RDA,mg/kg,41,Children (4-8 y),,1,aminoacid
+929,1217,Phenylalanine,RDA,mg/kg,41,9-13 y,Male,1,aminoacid
+930,1217,Phenylalanine,RDA,mg/kg,38,14-18 y,Male,1,aminoacid
+931,1217,Phenylalanine,RDA,mg/kg,33,19-30 y,Male,1,aminoacid
+932,1217,Phenylalanine,RDA,mg/kg,33,31-50 y,Male,1,aminoacid
+933,1217,Phenylalanine,RDA,mg/kg,33,51-70 y,Male,1,aminoacid
+934,1217,Phenylalanine,RDA,mg/kg,33,> 70 y,Male,1,aminoacid
+935,1217,Phenylalanine,RDA,mg/kg,38,9-13 y,Female,1,aminoacid
+936,1217,Phenylalanine,RDA,mg/kg,35,14-18 y,Female,1,aminoacid
+937,1217,Phenylalanine,RDA,mg/kg,33,19-30 y,Female,1,aminoacid
+938,1217,Phenylalanine,RDA,mg/kg,33,31-50 y,Female,1,aminoacid
+939,1217,Phenylalanine,RDA,mg/kg,33,51-70 y,Female,1,aminoacid
+940,1217,Phenylalanine,RDA,mg/kg,33,> 70 y,Female,1,aminoacid
+941,1217,Phenylalanine,RDA,mg/kg,44,14-18 y,Pregnancy,1,aminoacid
+942,1217,Phenylalanine,RDA,mg/kg,44,19-30 y,Pregnancy,1,aminoacid
+943,1217,Phenylalanine,RDA,mg/kg,44,31-50 y,Pregnancy,1,aminoacid
+944,1217,Phenylalanine,RDA,mg/kg,51,14-18 y,Lactation,1,aminoacid
+945,1217,Phenylalanine,RDA,mg/kg,51,19-30 y,Lactation,1,aminoacid
+946,1217,Phenylalanine,RDA,mg/kg,51,31-50 y,Lactation,1,aminoacid
+947,1218,Tyrosine,AI,mg/kg,135,Infant (0-6 mo),,1,aminoacid
+948,1218,Tyrosine,RDA,mg/kg,84,Infant (7-12 mo),,1,aminoacid
+949,1218,Tyrosine,RDA,mg/kg,54,Children (1-3 y),,1,aminoacid
+950,1218,Tyrosine,RDA,mg/kg,41,Children (4-8 y),,1,aminoacid
+951,1218,Tyrosine,RDA,mg/kg,41,9-13 y,Male,1,aminoacid
+952,1218,Tyrosine,RDA,mg/kg,38,14-18 y,Male,1,aminoacid
+953,1218,Tyrosine,RDA,mg/kg,33,19-30 y,Male,1,aminoacid
+954,1218,Tyrosine,RDA,mg/kg,33,31-50 y,Male,1,aminoacid
+955,1218,Tyrosine,RDA,mg/kg,33,51-70 y,Male,1,aminoacid
+956,1218,Tyrosine,RDA,mg/kg,33,> 70 y,Male,1,aminoacid
+957,1218,Tyrosine,RDA,mg/kg,38,9-13 y,Female,1,aminoacid
+958,1218,Tyrosine,RDA,mg/kg,35,14-18 y,Female,1,aminoacid
+959,1218,Tyrosine,RDA,mg/kg,33,19-30 y,Female,1,aminoacid
+960,1218,Tyrosine,RDA,mg/kg,33,31-50 y,Female,1,aminoacid
+961,1218,Tyrosine,RDA,mg/kg,33,51-70 y,Female,1,aminoacid
+962,1218,Tyrosine,RDA,mg/kg,33,> 70 y,Female,1,aminoacid
+963,1218,Tyrosine,RDA,mg/kg,44,14-18 y,Pregnancy,1,aminoacid
+964,1218,Tyrosine,RDA,mg/kg,44,19-30 y,Pregnancy,1,aminoacid
+965,1218,Tyrosine,RDA,mg/kg,44,31-50 y,Pregnancy,1,aminoacid
+966,1218,Tyrosine,RDA,mg/kg,51,14-18 y,Lactation,1,aminoacid
+967,1218,Tyrosine,RDA,mg/kg,51,19-30 y,Lactation,1,aminoacid
+968,1218,Tyrosine,RDA,mg/kg,51,31-50 y,Lactation,1,aminoacid
+969,1211,Threonine,AI,mg/kg,73,Infant (0-6 mo),,1,aminoacid
+970,1211,Threonine,RDA,mg/kg,49,Infant (7-12 mo),,1,aminoacid
+971,1211,Threonine,RDA,mg/kg,32,Children (1-3 y),,1,aminoacid
+972,1211,Threonine,RDA,mg/kg,24,Children (4-8 y),,1,aminoacid
+973,1211,Threonine,RDA,mg/kg,24,9-13 y,Male,1,aminoacid
+974,1211,Threonine,RDA,mg/kg,22,14-18 y,Male,1,aminoacid
+975,1211,Threonine,RDA,mg/kg,20,19-30 y,Male,1,aminoacid
+976,1211,Threonine,RDA,mg/kg,20,31-50 y,Male,1,aminoacid
+977,1211,Threonine,RDA,mg/kg,20,51-70 y,Male,1,aminoacid
+978,1211,Threonine,RDA,mg/kg,20,> 70 y,Male,1,aminoacid
+979,1211,Threonine,RDA,mg/kg,22,9-13 y,Female,1,aminoacid
+980,1211,Threonine,RDA,mg/kg,21,14-18 y,Female,1,aminoacid
+981,1211,Threonine,RDA,mg/kg,20,19-30 y,Female,1,aminoacid
+982,1211,Threonine,RDA,mg/kg,20,31-50 y,Female,1,aminoacid
+983,1211,Threonine,RDA,mg/kg,20,51-70 y,Female,1,aminoacid
+984,1211,Threonine,RDA,mg/kg,20,> 70 y,Female,1,aminoacid
+985,1211,Threonine,RDA,mg/kg,20,14-18 y,Pregnancy,1,aminoacid
+986,1211,Threonine,RDA,mg/kg,20,19-30 y,Pregnancy,1,aminoacid
+987,1211,Threonine,RDA,mg/kg,20,31-50 y,Pregnancy,1,aminoacid
+988,1211,Threonine,RDA,mg/kg,26,14-18 y,Lactation,1,aminoacid
+989,1211,Threonine,RDA,mg/kg,26,19-30 y,Lactation,1,aminoacid
+990,1211,Threonine,RDA,mg/kg,26,31-50 y,Lactation,1,aminoacid
+991,1210,Tryptophan,AI,mg/kg,28,Infant (0-6 mo),,1,aminoacid
+992,1210,Tryptophan,RDA,mg/kg,13,Infant (7-12 mo),,1,aminoacid
+993,1210,Tryptophan,RDA,mg/kg,8,Children (1-3 y),,1,aminoacid
+994,1210,Tryptophan,RDA,mg/kg,6,Children (4-8 y),,1,aminoacid
+995,1210,Tryptophan,RDA,mg/kg,6,9-13 y,Male,1,aminoacid
+996,1210,Tryptophan,RDA,mg/kg,6,14-18 y,Male,1,aminoacid
+997,1210,Tryptophan,RDA,mg/kg,5,19-30 y,Male,1,aminoacid
+998,1210,Tryptophan,RDA,mg/kg,5,31-50 y,Male,1,aminoacid
+999,1210,Tryptophan,RDA,mg/kg,5,51-70 y,Male,1,aminoacid
+1000,1210,Tryptophan,RDA,mg/kg,5,> 70 y,Male,1,aminoacid
+1001,1210,Tryptophan,RDA,mg/kg,6,9-13 y,Female,1,aminoacid
+1002,1210,Tryptophan,RDA,mg/kg,5,14-18 y,Female,1,aminoacid
+1003,1210,Tryptophan,RDA,mg/kg,5,19-30 y,Female,1,aminoacid
+1004,1210,Tryptophan,RDA,mg/kg,5,31-50 y,Female,1,aminoacid
+1005,1210,Tryptophan,RDA,mg/kg,5,51-70 y,Female,1,aminoacid
+1006,1210,Tryptophan,RDA,mg/kg,5,> 70 y,Female,1,aminoacid
+1007,1210,Tryptophan,RDA,mg/kg,5,14-18 y,Pregnancy,1,aminoacid
+1008,1210,Tryptophan,RDA,mg/kg,5,19-30 y,Pregnancy,1,aminoacid
+1009,1210,Tryptophan,RDA,mg/kg,5,31-50 y,Pregnancy,1,aminoacid
+1010,1210,Tryptophan,RDA,mg/kg,7,14-18 y,Lactation,1,aminoacid
+1011,1210,Tryptophan,RDA,mg/kg,7,19-30 y,Lactation,1,aminoacid
+1012,1210,Tryptophan,RDA,mg/kg,7,31-50 y,Lactation,1,aminoacid
+1013,1219,Valine,AI,mg/kg,87,Infant (0-6 mo),,1,aminoacid
+1014,1219,Valine,RDA,mg/kg,58,Infant (7-12 mo),,1,aminoacid
+1015,1219,Valine,RDA,mg/kg,37,Children (1-3 y),,1,aminoacid
+1016,1219,Valine,RDA,mg/kg,28,Children (4-8 y),,1,aminoacid
+1017,1219,Valine,RDA,mg/kg,28,9-13 y,Male,1,aminoacid
+1018,1219,Valine,RDA,mg/kg,27,14-18 y,Male,1,aminoacid
+1019,1219,Valine,RDA,mg/kg,24,19-30 y,Male,1,aminoacid
+1020,1219,Valine,RDA,mg/kg,24,31-50 y,Male,1,aminoacid
+1021,1219,Valine,RDA,mg/kg,24,51-70 y,Male,1,aminoacid
+1022,1219,Valine,RDA,mg/kg,24,> 70 y,Male,1,aminoacid
+1023,1219,Valine,RDA,mg/kg,27,9-13 y,Female,1,aminoacid
+1024,1219,Valine,RDA,mg/kg,24,14-18 y,Female,1,aminoacid
+1025,1219,Valine,RDA,mg/kg,24,19-30 y,Female,1,aminoacid
+1026,1219,Valine,RDA,mg/kg,24,31-50 y,Female,1,aminoacid
+1027,1219,Valine,RDA,mg/kg,24,51-70 y,Female,1,aminoacid
+1028,1219,Valine,RDA,mg/kg,24,> 70 y,Female,1,aminoacid
+1029,1219,Valine,RDA,mg/kg,24,14-18 y,Pregnancy,1,aminoacid
+1030,1219,Valine,RDA,mg/kg,24,19-30 y,Pregnancy,1,aminoacid
+1031,1219,Valine,RDA,mg/kg,24,31-50 y,Pregnancy,1,aminoacid
+1032,1219,Valine,RDA,mg/kg,31,14-18 y,Lactation,1,aminoacid
+1033,1219,Valine,RDA,mg/kg,31,19-30 y,Lactation,1,aminoacid
+1034,1219,Valine,RDA,mg/kg,31,31-50 y,Lactation,1,aminoacid
