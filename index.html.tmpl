@@ -104,7 +104,7 @@
       })
     }
 
-    function configureNutrientSelector(DRI) {
+    function configureNutrientSelector(nutrient_groups) {
       const nutrient_selector = document.getElementById("nutrient_selector")
       const nutrient_ids = new Set()
       const nutrients = []
@@ -116,30 +116,29 @@
       }
       nutrients.sort((a, b) => a.name.localeCompare(b.name))
 
-      const dri_nutrient_ids = Object.keys(DRI[Object.keys(DRI)[0]])
+      const vitamins = nutrients.filter(n => nutrient_groups[n.id] === 'vitamin')
+      const element = nutrients.filter(n => nutrient_groups[n.id] === 'element')
+      const macro = nutrients.filter(n => nutrient_groups[n.id] === 'macronutrient')
+      const aminoacid = nutrients.filter(n => nutrient_groups[n.id] === 'aminoacid')
+      const other = nutrients.filter(n => !nutrient_groups[n.id])
 
-      dri_nutrients = nutrients.filter(n => dri_nutrient_ids.includes(n.id))
-      non_dri_nutrients = nutrients.filter(n => !dri_nutrient_ids.includes(n.id))
-
-      let optgroup = document.createElement("optgroup")
-      optgroup.label = "Essential nutrients"
-      for (let nutrient of dri_nutrients) {
-        let option = document.createElement("option")
-        option.value = nutrient.id
-        option.innerText = nutrient.name
-        optgroup.appendChild(option)
+      function createOptionGroup(label, nutrients) {
+        let optgroup = document.createElement("optgroup")
+        optgroup.label = label
+        for (let nutrient of nutrients) {
+          let option = document.createElement("option")
+          option.value = nutrient.id
+          option.innerText = nutrient.name
+          optgroup.appendChild(option)
+        }
+        return optgroup
       }
-      nutrient_selector.appendChild(optgroup)
 
-      optgroup = document.createElement("optgroup")
-      optgroup.label = "Other nutrients"
-      for (let nutrient of non_dri_nutrients) {
-        let option = document.createElement("option")
-        option.value = nutrient.id
-        option.innerText = nutrient.name
-        optgroup.appendChild(option)
-      }
-      nutrient_selector.appendChild(optgroup)
+      nutrient_selector.appendChild(createOptionGroup("Vitamins", vitamins))
+      nutrient_selector.appendChild(createOptionGroup("Elements", element))
+      nutrient_selector.appendChild(createOptionGroup("Macro Nutrients", macro))
+      nutrient_selector.appendChild(createOptionGroup("Amino Acids", aminoacid))
+      nutrient_selector.appendChild(createOptionGroup("Other", other))
 
       nutrient_selector.addEventListener("change", event => {
         window.pageIndex = 0
@@ -325,7 +324,15 @@
         window.DRI = DRI
       }
       configureConsumerSelector(window.DRI)
-      configureNutrientSelector(window.DRI)
+
+      const nutrient_groups = {}
+      for (let row of window.data.dri) {
+        const fdc_nutrient_id = row[1]
+        const group_name = row[9]
+        nutrient_groups[fdc_nutrient_id] = group_name
+      }
+
+      configureNutrientSelector(nutrient_groups)
     }
 
     window.addEventListener('load', event => {
