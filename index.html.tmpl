@@ -112,17 +112,26 @@
         const id = row[2]
         if (nutrient_ids.has(id)) continue
         nutrient_ids.add(id)
-        nutrients.push({ id, name: row[3] })
+        nutrients.push({
+          id,
+          name: nutrient_groups[id] ? nutrient_groups[id].nutrient_name : row[3] })
       }
+
       nutrients.sort((a, b) => a.name.localeCompare(b.name))
 
-      const vitamins = nutrients.filter(n => nutrient_groups[n.id] === 'vitamin')
-      const element = nutrients.filter(n => nutrient_groups[n.id] === 'element')
-      const macro = nutrients.filter(n => nutrient_groups[n.id] === 'macronutrient')
-      const aminoacid = nutrients.filter(n => nutrient_groups[n.id] === 'aminoacid')
+      function by_group(group) {
+        return n => nutrient_groups[n.id] &&
+                    nutrient_groups[n.id].group_name === group
+      }
+
+      const vitamins = nutrients.filter(by_group('vitamin'))
+      const element = nutrients.filter(by_group('element'))
+      const macro = nutrients.filter(by_group('macronutrient'))
+      const aminoacid = nutrients.filter(by_group('aminoacid'))
       const other = nutrients.filter(n => !nutrient_groups[n.id])
 
       function createOptionGroup(label, nutrients) {
+        console.log(label, nutrients)
         let optgroup = document.createElement("optgroup")
         optgroup.label = label
         for (let nutrient of nutrients) {
@@ -328,8 +337,9 @@
       const nutrient_groups = {}
       for (let row of window.data.dri) {
         const fdc_nutrient_id = row[1]
+        const nutrient_name = row[2]
         const group_name = row[9]
-        nutrient_groups[fdc_nutrient_id] = group_name
+        nutrient_groups[fdc_nutrient_id] = { group_name, nutrient_name }
       }
 
       configureNutrientSelector(nutrient_groups)
