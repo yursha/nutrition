@@ -73,37 +73,6 @@
       LACTATION_19_50_Y: 'Lactation (19 through 50 y)'
     }
 
-    // Source:
-    //   https://www.nap.edu/read/11537/chapter/21
-    const RDA = {
-      VITAMIN_C: { unit: 'mg', stages: {
-        [CONSUMER.MALE_0_6_MO]: { type: 'AI', amount: 40},
-        [CONSUMER.MALE_7_12_MO]: { type: 'AI', amount: 50},
-        [CONSUMER.MALE_1_3_Y]: { type: 'RDA', amount: 15},
-        [CONSUMER.MALE_4_8_Y]: { type: 'RDA', amount: 25},
-        [CONSUMER.MALE_9_13_Y]: { type: 'RDA', amount: 45},
-        [CONSUMER.MALE_14_18_Y]: { type: 'RDA', amount: 75},
-        [CONSUMER.MALE_19_30_Y]: { type: 'RDA', amount: 90},
-        [CONSUMER.MALE_31_50_Y]: { type: 'RDA', amount: 90},
-        [CONSUMER.MALE_51_70_Y]: { type: 'RDA', amount: 90},
-        [CONSUMER.MALE_71_Y]: { type: 'RDA', amount: 90},
-        [CONSUMER.FEMALE_0_6_MO]: { type: 'RDA', amount: 40},
-        [CONSUMER.FEMALE_7_12_MO]: { type: 'RDA', amount: 50},
-        [CONSUMER.FEMALE_1_3_Y]: { type: 'RDA', amount: 15},
-        [CONSUMER.FEMALE_4_8_Y]: { type: 'RDA', amount: 25},
-        [CONSUMER.FEMALE_9_13_Y]: { type: 'RDA', amount: 45},
-        [CONSUMER.FEMALE_14_18_Y]: { type: 'RDA', amount: 65},
-        [CONSUMER.FEMALE_19_30_Y]: { type: 'RDA', amount: 75},
-        [CONSUMER.FEMALE_31_50_Y]: { type: 'RDA', amount: 75},
-        [CONSUMER.FEMALE_51_70_Y]: { type: 'RDA', amount: 75},
-        [CONSUMER.FEMALE_71_Y]: { type: 'RDA', amount: 75},
-        [CONSUMER.PREGNANCY_UNDER_18_Y]: { type: 'RDA', amount: 80},
-        [CONSUMER.PREGNANCY_19_50_Y]: { type: 'RDA', amount: 85},
-        [CONSUMER.LACTATION_UNDER_18_Y]: { type: 'RDA', amount: 115},
-        [CONSUMER.LACTATION_19_50_Y]: { type: 'RDA', amount: 120}
-      }}
-    }
-
     function configureDenominatorSelector() {
       const denominator_selector = document.getElementById("denominator_selector")
       for (let denominator of [
@@ -120,10 +89,9 @@
       })
     }
 
-    // Food And Nutrition Board Life Stage Groups
-    function configureConsumerSelector() {
+    function configureConsumerSelector(DRI) {
       const consumer_selector = document.getElementById("consumer_selector")
-      for (let consumer of Object.values(CONSUMER)) {
+      for (let consumer of Object.keys(DRI)) {
         let option = document.createElement("option")
         option.value = consumer
         option.innerText = consumer
@@ -136,11 +104,11 @@
       })
     }
 
-    function configureNutrientSelector() {
+    function configureNutrientSelector(DRI) {
       const nutrient_selector = document.getElementById("nutrient_selector")
       const nutrient_ids = new Set()
       const nutrients = []
-      for (let row of window.data) {
+      for (let row of window.data.nutrients) {
         const id = row[2]
         if (nutrient_ids.has(id)) continue
         nutrient_ids.add(id)
@@ -148,12 +116,30 @@
       }
       nutrients.sort((a, b) => a.name.localeCompare(b.name))
 
-      for (let nutrient of nutrients) {
+      const dri_nutrient_ids = Object.keys(DRI[Object.keys(DRI)[0]])
+
+      dri_nutrients = nutrients.filter(n => dri_nutrient_ids.includes(n.id))
+      non_dri_nutrients = nutrients.filter(n => !dri_nutrient_ids.includes(n.id))
+
+      let optgroup = document.createElement("optgroup")
+      optgroup.label = "Essential nutrients"
+      for (let nutrient of dri_nutrients) {
         let option = document.createElement("option")
         option.value = nutrient.id
         option.innerText = nutrient.name
-        nutrient_selector.appendChild(option)
+        optgroup.appendChild(option)
       }
+      nutrient_selector.appendChild(optgroup)
+
+      optgroup = document.createElement("optgroup")
+      optgroup.label = "Other nutrients"
+      for (let nutrient of non_dri_nutrients) {
+        let option = document.createElement("option")
+        option.value = nutrient.id
+        option.innerText = nutrient.name
+        optgroup.appendChild(option)
+      }
+      nutrient_selector.appendChild(optgroup)
 
       nutrient_selector.addEventListener("change", event => {
         window.pageIndex = 0
@@ -165,7 +151,7 @@
       const categories_selector = document.getElementById("categories_selector")
       const category_ids = new Set()
       const categories = []
-      for (let row of window.data) {
+      for (let row of window.data.nutrients) {
         const id = row[1]
         if (category_ids.has(id)) continue
         category_ids.add(id)
@@ -216,7 +202,7 @@
       }
       let tbody = data_table.createTBody()
 
-      let filteredData = window.data.filter(row => {
+      let filteredData = window.data.nutrients.filter(row => {
         return desired_categories.includes(row[1]) && row[2] === nutrient
       })
       if (food_filter) {
@@ -254,18 +240,21 @@
           if (i === 3) {
             td.innerText = `${col} (${row[i+1].toLowerCase()})`
           } else if (i === 5) {
+            let nutrient_amount = 0
             if (denominator === DENOMINATOR_WEIGHT) {
-              td.innerText = col
+              nutrient_amount = col
             } else if (denominator === DENOMINATOR_ENERGY) {
-              td.innerText = row[i + 1]
+              nutrient_amount = row[i + 1]
             } else if (denominator === DENOMINATOR_FAT) {
-              td.innerText = row[i + 2]
+              nutrient_amount= row[i + 2]
             }
+            const daily_dose = window.data.rdi
             if (row[3] === 'Vitamin C, total ascorbic acid') {
               const daily_dose = RDA.VITAMIN_C.stages[consumer].amount
               td.innerText = 
                 `${(td.innerText * 100 / daily_dose).toFixed(1)}%`
             }
+            td.innerText = nutrient_amount
           } else {
             td.innerText = col
           }
@@ -316,11 +305,33 @@
       })
     }
 
+    function configureDri() {
+      let DRI = {}
+      for (let row of window.data.dri) {
+        const fdc_nutrient_id = row[1]
+        const dri_value = {unit: row[4], amount: row[5]}
+
+        let life_stage = row[6]
+        const consumer_sex = row[7]
+        if (consumer_sex) {
+          life_stage = `${consumer_sex} (${life_stage})`
+        }
+
+        if (!DRI[life_stage]) DRI[life_stage] = {}
+        if (!DRI[life_stage][fdc_nutrient_id]) DRI[life_stage][fdc_nutrient_id] = {}
+
+        DRI[life_stage][fdc_nutrient_id] = dri_value
+
+        window.DRI = DRI
+      }
+      configureConsumerSelector(window.DRI)
+      configureNutrientSelector(window.DRI)
+    }
+
     window.addEventListener('load', event => {
+      configureDri()
       configureCategoriesSelector()
-      configureNutrientSelector()
       configureDenominatorSelector()
-      configureConsumerSelector()
       configurePagination()
       configureFoodFilter()
       rerender()

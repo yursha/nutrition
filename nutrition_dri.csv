@@ -1,26 +1,26 @@
 id,fdc_nutrient_id,nutrient_name,type,unit,amount,life_stage_id,sex,source_id,category
-1,1106,Vitamin A,AI,mgc,400,Infant (0-6 mo),,1,vitamin
-2,1106,Vitamin A,AI,mgc,500,Infant (7-12 mo),,1,vitamin
-3,1106,Vitamin A,RDA,mgc,300,Children (1-3 y),,1,vitamin
-4,1106,Vitamin A,RDA,mgc,400,Children (4-8 y),,1,vitamin
-5,1106,Vitamin A,RDA,mgc,600,9-13 y,Male,1,vitamin
-6,1106,Vitamin A,RDA,mgc,900,14-18 y,Male,1,vitamin
-7,1106,Vitamin A,RDA,mgc,900,19-30 y,Male,1,vitamin
-8,1106,Vitamin A,RDA,mgc,900,31-50 y,Male,1,vitamin
-9,1106,Vitamin A,RDA,mgc,900,51-70 y,Male,1,vitamin
-10,1106,Vitamin A,RDA,mgc,900,> 70 y,Male,1,vitamin
-11,1106,Vitamin A,RDA,mgc,600,9-13 y,Female,1,vitamin
-12,1106,Vitamin A,RDA,mgc,700,14-18 y,Female,1,vitamin
-13,1106,Vitamin A,RDA,mgc,700,19-30 y,Female,1,vitamin
-14,1106,Vitamin A,RDA,mgc,700,31-50 y,Female,1,vitamin
-15,1106,Vitamin A,RDA,mgc,700,51-70 y,Female,1,vitamin
-16,1106,Vitamin A,RDA,mgc,700,> 70 y,Female,1,vitamin
-17,1106,Vitamin A,RDA,mgc,750,14-18 y,Pregnancy,1,vitamin
-18,1106,Vitamin A,RDA,mgc,770,19-30 y,Pregnancy,1,vitamin
-19,1106,Vitamin A,RDA,mgc,770,31-50 y,Pregnancy,1,vitamin
-20,1106,Vitamin A,RDA,mgc,1200,14-18 y,Lactation,1,vitamin
-21,1106,Vitamin A,RDA,mgc,1300,19-30 y,Lactation,1,vitamin
-22,1106,Vitamin A,RDA,mgc,1300,31-50 y,Lactation,1,vitamin
+1,1106,Vitamin A,AI,mcg,400,Infant (0-6 mo),,1,vitamin
+2,1106,Vitamin A,AI,mcg,500,Infant (7-12 mo),,1,vitamin
+3,1106,Vitamin A,RDA,mcg,300,Children (1-3 y),,1,vitamin
+4,1106,Vitamin A,RDA,mcg,400,Children (4-8 y),,1,vitamin
+5,1106,Vitamin A,RDA,mcg,600,9-13 y,Male,1,vitamin
+6,1106,Vitamin A,RDA,mcg,900,14-18 y,Male,1,vitamin
+7,1106,Vitamin A,RDA,mcg,900,19-30 y,Male,1,vitamin
+8,1106,Vitamin A,RDA,mcg,900,31-50 y,Male,1,vitamin
+9,1106,Vitamin A,RDA,mcg,900,51-70 y,Male,1,vitamin
+10,1106,Vitamin A,RDA,mcg,900,> 70 y,Male,1,vitamin
+11,1106,Vitamin A,RDA,mcg,600,9-13 y,Female,1,vitamin
+12,1106,Vitamin A,RDA,mcg,700,14-18 y,Female,1,vitamin
+13,1106,Vitamin A,RDA,mcg,700,19-30 y,Female,1,vitamin
+14,1106,Vitamin A,RDA,mcg,700,31-50 y,Female,1,vitamin
+15,1106,Vitamin A,RDA,mcg,700,51-70 y,Female,1,vitamin
+16,1106,Vitamin A,RDA,mcg,700,> 70 y,Female,1,vitamin
+17,1106,Vitamin A,RDA,mcg,750,14-18 y,Pregnancy,1,vitamin
+18,1106,Vitamin A,RDA,mcg,770,19-30 y,Pregnancy,1,vitamin
+19,1106,Vitamin A,RDA,mcg,770,31-50 y,Pregnancy,1,vitamin
+20,1106,Vitamin A,RDA,mcg,1200,14-18 y,Lactation,1,vitamin
+21,1106,Vitamin A,RDA,mcg,1300,19-30 y,Lactation,1,vitamin
+22,1106,Vitamin A,RDA,mcg,1300,31-50 y,Lactation,1,vitamin
 23,1162,Vitamin C,AI,mg,40,Infant (0-6 mo),,1,vitamin
 24,1162,Vitamin C,AI,mg,50,Infant (7-12 mo),,1,vitamin
 25,1162,Vitamin C,RDA,mg,15,Children (1-3 y),,1,vitamin

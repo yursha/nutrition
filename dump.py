@@ -26,7 +26,12 @@ c.execute("""
     WHERE f.food_category_id in (1, 2, 9, 11, 12, 15, 16, 20)
     ORDER BY (nutrient_amount_per_100g + 0) DESC
 """)
-data = json.dumps(c.fetchall())
+nutrients = c.fetchall()
+
+c.execute("SELECT * FROM nutrition_dri WHERE fdc_nutrient_id <> '' AND amount <> 'ND'")
+dri = c.fetchall()
+
+data = json.dumps({'nutrients': nutrients, 'dri': dri})
 
 con.close()
 
