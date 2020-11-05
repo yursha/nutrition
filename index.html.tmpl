@@ -205,10 +205,10 @@
         }
 
       }
-      console.log('Comparing', {daily_dose, food_dose})
       const multiplier = conversions[food_unit.toLowerCase()][rdi_unit.toLowerCase()]
       if (multiplier)
         return food_value * multiplier * 100 / rdi_value
+      console.log({daily_dose, food_dose})
       throw Error('Unsupported unit conversion')
     }
 
@@ -264,17 +264,17 @@
         filteredData.length / window.pageSize :
         (Math.floor(filteredData.length / window.pageSize) + 1)
 
+      let amount_units = ''
+
       for (let [j, row] of filteredData.entries()) {
         if (j < pageIndex * window.pageSize) continue;
         if (j === (pageIndex + 1) * window.pageSize) break;
 
         let tr = document.createElement("tr")
         for (let [i, col] of row.entries()) {
-          if ([1, 2, 4, 6, 7].includes(i)) continue
+          if ([1, 2, 3, 4, 6, 7].includes(i)) continue
           let td = document.createElement("td")
-          if (i === 3) {
-            td.innerText = `${col} (${row[i+1].toLowerCase()})`
-          } else if (i === 5) {
+          if (i === 5) {
             let nutrient_amount = 0
             if (denominator === DENOMINATOR_WEIGHT) {
               nutrient_amount = col
@@ -289,9 +289,11 @@
               const percent = percent_completion(
                 daily_dose, {amount: nutrient_amount, unit: row[4]}
               )
-              td.innerText = `${percent.toFixed(1)}%`
+              td.innerText = percent.toFixed(1)
+              amount_units = '% DRI'
             } else {
               td.innerText = nutrient_amount
+              amount_units = row[4]
             }
           } else {
             td.innerText = col
@@ -304,6 +306,8 @@
         }
         tbody.appendChild(tr)
       }
+      const amount_th = document.getElementById('amount_table_header')
+      amount_th.innerText = `Amount (${amount_units})`
 
       return num_pages
     }
@@ -416,8 +420,7 @@
     <thead>
       <tr>
         <th>Food</th>
-        <th>Nutrient</th>
-        <th>Amount</th>
+        <th id="amount_table_header">Amount</th>
       </tr>
     </thead>
   </table>
