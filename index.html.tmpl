@@ -212,7 +212,44 @@
       throw Error('Unsupported unit conversion')
     }
 
+    function configureTableHeader(has_dri) {
+      const thead = document.createElement('thead')
+      const header_row = document.createElement('tr')
+
+      let food_th = document.createElement('th')
+      food_th.innerText = 'Food'
+      header_row.appendChild(food_th)
+
+      let amount_th = document.createElement('th')
+      amount_th.innerText = "Amount"
+      header_row.appendChild(amount_th)
+
+      if (has_dri) {
+        let dri_th = document.createElement('th')
+        dri_th.innerText = "DRI"
+        header_row.appendChild(dri_th)
+
+        let percent_dri_th = document.createElement('th')
+        percent_dri_th.innerText = "% DRI"
+        header_row.appendChild(percent_dri_th)
+      }
+
+      thead.appendChild(header_row)
+
+      document.getElementById('data_table').appendChild(thead)
+    }
+
     function configureDataTable() {
+      const data_table = document.getElementById("data_table")
+      data_table.innerText = ''
+
+      const consumer = document.getElementById("consumer_selector").value
+      const consumer_dri = window.DRI[consumer]
+      const nutrient = document.getElementById("nutrient_selector").value
+      let daily_dose = consumer_dri[nutrient]
+
+      configureTableHeader(!!daily_dose)
+
       const food_categories = document.getElementById("categories_selector")
       const selectors = food_categories.getElementsByTagName("input")
       let desired_categories = []
@@ -222,19 +259,10 @@
         }
       }
 
-      const nutrient = document.getElementById("nutrient_selector").value
       const denominator = document.getElementById("denominator_selector").value
-      const consumer = document.getElementById("consumer_selector").value
-      const consumer_dri = window.DRI[consumer]
 
       const food_filter = document.getElementById("food_filter").value.toLowerCase()
 
-      const data_table = document.getElementById("data_table")
-
-      // Remove all rows except for the heading
-      for (let tbody of data_table.tBodies) {
-        data_table.removeChild(tbody)
-      }
       let tbody = data_table.createTBody()
 
       let filteredData = window.data.nutrients.filter(row => {
@@ -271,44 +299,42 @@
         if (j === (pageIndex + 1) * window.pageSize) break;
 
         let tr = document.createElement("tr")
-        for (let [i, col] of row.entries()) {
-          if ([1, 2, 3, 4, 6, 7].includes(i)) continue
+
+        const food_name = row[0]
+        let td = document.createElement("td")
+        td.innerText = food_name
+        tr.appendChild(td)
+
+        let nutrient_amount
+        if (denominator === DENOMINATOR_WEIGHT) {
+          nutrient_amount = row[5]
+        } else if (denominator === DENOMINATOR_ENERGY) {
+          nutrient_amount = row[6]
+        } else if (denominator === DENOMINATOR_FAT) {
+          nutrient_amount = row[7]
+        }
+        const food_unit = row[4].toLowerCase()
+        td = document.createElement("td")
+        td.style.textAlign = 'right'
+        td.innerText = `${nutrient_amount}${food_unit}`
+        tr.appendChild(td)
+
+        if (daily_dose) {
           let td = document.createElement("td")
-          if (i === 5) {
-            let nutrient_amount = 0
-            if (denominator === DENOMINATOR_WEIGHT) {
-              nutrient_amount = col
-            } else if (denominator === DENOMINATOR_ENERGY) {
-              nutrient_amount = row[i + 1]
-            } else if (denominator === DENOMINATOR_FAT) {
-              nutrient_amount= row[i + 2]
-            }
-            const nutrient_id = row[2]
-            const daily_dose = consumer_dri[nutrient_id]
-            if (daily_dose) {
-              const percent = percent_completion(
-                daily_dose, {amount: nutrient_amount, unit: row[4]}
-              )
-              td.innerText = percent.toFixed(1)
-              amount_units = '% DRI'
-            } else {
-              td.innerText = nutrient_amount
-              amount_units = row[4]
-            }
-          } else {
-            td.innerText = col
-          }
+          td.style.textAlign = 'right'
+          td.innerText = `${daily_dose.amount}${daily_dose.unit}`
           tr.appendChild(td)
 
-          if (i == 5) {
-            td.style.textAlign = 'right'
-          }
+          td = document.createElement("td")
+          td.style.textAlign = 'right'
+          const percent = percent_completion(
+            daily_dose, {amount: nutrient_amount, unit: food_unit}
+          )
+          td.innerText = percent.toFixed(1)
+          tr.appendChild(td)
         }
         tbody.appendChild(tr)
       }
-      const amount_th = document.getElementById('amount_table_header')
-      amount_th.innerText = `Amount (${amount_units})`
-
       return num_pages
     }
 
@@ -417,12 +443,6 @@
     <input id="food_filter" style="margin-left: 1rem; width: 25rem;">
   </div>
   <table id="data_table">
-    <thead>
-      <tr>
-        <th>Food</th>
-        <th id="amount_table_header">Amount</th>
-      </tr>
-    </thead>
   </table>
   <div style="display: flex; align-items: baseline; justify-content: space-between;">
     <div>Food nutrient data is provided by <i>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</i></div>
