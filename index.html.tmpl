@@ -191,11 +191,25 @@
       const food_unit = food_dose.unit
       const food_value = food_dose.amount
 
-      if (food_unit.toLowerCase() === rdi_unit.toLowerCase()) {
-        return (food_value * 100 / rdi_value)
+      const conversions = {
+        'g': {
+          'g': 1,
+          'l': 0.001,
+          'mg/kg': 1000,
+        },
+        'mg': {
+          'mg': 1,
+        },
+        'ug': {
+          'mcg': 1,
+        }
+
       }
-      console.log('Not comparable', {daily_dose, food_dose})
-      throw Error('Not comparable')
+      console.log('Comparing', {daily_dose, food_dose})
+      const multiplier = conversions[food_unit.toLowerCase()][rdi_unit.toLowerCase()]
+      if (multiplier)
+        return food_value * multiplier * 100 / rdi_value
+      throw Error('Unsupported unit conversion')
     }
 
     function configureDataTable() {
@@ -271,10 +285,14 @@
             }
             const nutrient_id = row[2]
             const daily_dose = consumer_dri[nutrient_id]
-            const percent = percent_completion(
-              daily_dose, {amount: nutrient_amount, unit: row[4]}
-            )
-            td.innerText = `${percent.toFixed(1)}%`
+            if (daily_dose) {
+              const percent = percent_completion(
+                daily_dose, {amount: nutrient_amount, unit: row[4]}
+              )
+              td.innerText = `${percent.toFixed(1)}%`
+            } else {
+              td.innerText = nutrient_amount
+            }
           } else {
             td.innerText = col
           }
