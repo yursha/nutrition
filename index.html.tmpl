@@ -434,7 +434,7 @@
       const navLinks = document.getElementsByClassName('navlink')
       for (let link of navLinks) {
         link.addEventListener('click', e => {
-          navigate(link.id.substr(3)) // remove 'to_` prefix
+          navigate(link.getAttribute('to'))
         })
       }
 
@@ -448,6 +448,9 @@
     }
 
     window.addEventListener('load', event => {
+      window.addEventListener('popstate', e => {
+        console.log('popstate fired')
+      })
       configureDri()
       configureCategoriesSelector()
       configureDenominatorSelector()
@@ -463,12 +466,12 @@
   <div id="nutrient_search_page" class="page">
     <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem; background-color: beige;">
       <div style="flex: 1">
-        <i id="to_menu_page" class="material-icons navlink"
+        <i to="menu_page" class="material-icons navlink"
            style="cursor: default; padding: 0.5rem;">menu</i>
       </div>
       <h1 style="font-size: 1.25rem; margin: 0.5rem; flex: 10; text-align: center;">Nutrient Search</h1>
       <div style="flex: 1; display: flex; justify-content: flex-end;">
-        <i id="to_settings_page" class="material-icons navlink"
+        <i to="settings_page" class="material-icons navlink"
            style="cursor: default; padding: 0.5rem;">settings</i>
       </div>
     </div>
@@ -511,8 +514,8 @@
       <i id="close-menu-button" class="material-icons"
          style="cursor: default; padding: 0.5rem;">close</i>
       <nav style="text-align: center">
-        <div id="to_nutrient_search_page" class="navlink nav-item">Nutrient search</div>
-        <div id="to_about_page" class="navlink nav-item">About</div>
+        <div to="nutrient_search_page" class="navlink nav-item">Nutrient search</div>
+        <div to="about_page" class="navlink nav-item">About</div>
       </nav>
 
     </div>
