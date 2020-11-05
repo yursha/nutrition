@@ -131,7 +131,6 @@
       const other = nutrients.filter(n => !nutrient_groups[n.id])
 
       function createOptionGroup(label, nutrients) {
-        console.log(label, nutrients)
         let optgroup = document.createElement("optgroup")
         optgroup.label = label
         for (let nutrient of nutrients) {
@@ -186,6 +185,19 @@
       }
     }
 
+    function percent_completion(daily_dose, food_dose) {
+      const rdi_unit = daily_dose.unit
+      const rdi_value = daily_dose.amount
+      const food_unit = food_dose.unit
+      const food_value = food_dose.amount
+
+      if (food_unit.toLowerCase() === rdi_unit.toLowerCase()) {
+        return (food_value * 100 / rdi_value)
+      }
+      console.log('Not comparable', {daily_dose, food_dose})
+      throw Error('Not comparable')
+    }
+
     function configureDataTable() {
       const food_categories = document.getElementById("categories_selector")
       const selectors = food_categories.getElementsByTagName("input")
@@ -199,6 +211,7 @@
       const nutrient = document.getElementById("nutrient_selector").value
       const denominator = document.getElementById("denominator_selector").value
       const consumer = document.getElementById("consumer_selector").value
+      const consumer_dri = window.DRI[consumer]
 
       const food_filter = document.getElementById("food_filter").value.toLowerCase()
 
@@ -256,13 +269,12 @@
             } else if (denominator === DENOMINATOR_FAT) {
               nutrient_amount= row[i + 2]
             }
-            const daily_dose = window.data.rdi
-            if (row[3] === 'Vitamin C, total ascorbic acid') {
-              const daily_dose = RDA.VITAMIN_C.stages[consumer].amount
-              td.innerText = 
-                `${(td.innerText * 100 / daily_dose).toFixed(1)}%`
-            }
-            td.innerText = nutrient_amount
+            const nutrient_id = row[2]
+            const daily_dose = consumer_dri[nutrient_id]
+            const percent = percent_completion(
+              daily_dose, {amount: nutrient_amount, unit: row[4]}
+            )
+            td.innerText = `${percent.toFixed(1)}%`
           } else {
             td.innerText = col
           }
