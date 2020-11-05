@@ -467,7 +467,7 @@
            style="cursor: default; padding: 0.5rem;">menu</i>
       </div>
       <h1 style="font-size: 1.25rem; margin: 0.5rem; flex: 10; text-align: center;">Nutrient Search</h1>
-      <div style="flex: 1">
+      <div style="flex: 1; display: flex; justify-content: flex-end;">
         <i id="to_settings_page" class="material-icons navlink"
            style="cursor: default; padding: 0.5rem;">settings</i>
       </div>
@@ -499,8 +499,7 @@
     </div>
     <table id="data_table">
     </table>
-    <div style="display: flex; align-items: baseline; justify-content: space-between;">
-      <div>Food nutrient data is provided by <i>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</i></div>
+    <div style="display: flex; align-items: baseline; justify-content: center;">
       <div id="page_controls"
            style="display: flex; align-items: baseline;">
         <button disabled id="prev_page">Prev</button>
@@ -519,6 +518,10 @@
     </div>
     <div id="settings_page" class="page">
       Settings page
+    </div>
+    <div id="about_page" class="page" style="padding: 2rem">
+      <p><strong>Nutritionist</strong> is a tool to search for nutrients in food.</p>
+      <p>Food nutrient data is provided by <i>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</i></p>
     </div>
 </body>
 </html>
