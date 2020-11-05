@@ -27,9 +27,17 @@
     input {
       padding: 0.5rem 0.25rem;
     }
+    .nav-item {
+      line-height: 2rem;
+      font-size: 1.25rem;
+    }
     #page_controls > button {
       margin: 1rem;
       padding: 0.5rem 1.5rem;
+    }
+
+    .navlink:hover {
+      background-color: rbga(0,0,0,0.1);
     }
   </style>
   <script>
@@ -410,58 +418,107 @@
       configureNutrientSelector(nutrient_groups)
     }
 
+    function navigate(to) {
+      const activePages = document.getElementsByClassName('page')
+      if (activePages.length !== 1) {
+        console.log(activePages)
+        throw Error('Invalid state: not a single active page')
+      }
+      const activePage = activePages[0]
+      activePage.remove()
+      window.cachedPages[activePage.id] = activePage
+      document.body.appendChild(window.cachedPages[to])
+    }
+
+    function configureNavigation() {
+      const navLinks = document.getElementsByClassName('navlink')
+      for (let link of navLinks) {
+        link.addEventListener('click', e => {
+          navigate(link.id.substr(3)) // remove 'to_` prefix
+        })
+      }
+
+      window.cachedPages = {}
+      const pages = document.querySelectorAll('.page')
+      for (let page of pages) {
+        if (page.id === 'nutrient_search_page') continue
+        page.remove()
+        window.cachedPages[page.id] = page
+      }
+    }
+
     window.addEventListener('load', event => {
       configureDri()
       configureCategoriesSelector()
       configureDenominatorSelector()
       configurePagination()
       configureFoodFilter()
+      configureNavigation()
       rerender()
     })
 
   </script>
 </head>
 <body style="margin: 0; font-family: 'Roboto', sans-serif;">
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem; background-color: beige;">
-    <i class="material-icons" style="flex: 1">menu</i>
-    <h1 style="font-size: 1.25rem; margin: 0.5rem; flex: 10; text-align: center;">Nutrient Search</h1>
-    <div style="flex: 1"></div>
-  </div>
-  <div id="categories_selector"
-       style="padding: 0.5rem 0; display: flex; justify-content: space-between;">
-    <strong>Categories:</strong>
-  </div>
-  <div style="padding: 0.5rem 0; display: flex;">
-    <div style="flex: 4;">
-      <strong>Nutrient:</strong>
-      <select id="nutrient_selector"
-              style="padding: 0.5rem; border: none; outline: none;"></select>
+  <div id="nutrient_search_page" class="page">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.5rem; background-color: beige;">
+      <div style="flex: 1">
+        <i id="to_menu_page" class="material-icons navlink"
+           style="cursor: default; padding: 0.5rem;">menu</i>
+      </div>
+      <h1 style="font-size: 1.25rem; margin: 0.5rem; flex: 10; text-align: center;">Nutrient Search</h1>
+      <div style="flex: 1">
+        <i id="to_settings_page" class="material-icons navlink"
+           style="cursor: default; padding: 0.5rem;">settings</i>
+      </div>
     </div>
-    <div style="flex: 4;">
-      <strong>Per:</strong>
-      <select id="denominator_selector"
-              style="padding: 0.5rem; border: none; outline: none;"></select>
+    <div id="categories_selector"
+         style="padding: 0.5rem 0; display: flex; justify-content: space-between;">
+      <strong>Categories:</strong>
     </div>
-    <div style="flex: 4;">
-      <strong>For:</strong>
-      <select id="consumer_selector"
-              style="padding: 0.5rem; border: none; outline: none;"></select>
+    <div style="padding: 0.5rem 0; display: flex;">
+      <div style="flex: 4;">
+        <strong>Nutrient:</strong>
+        <select id="nutrient_selector"
+                style="padding: 0.5rem; border: none; outline: none;"></select>
+      </div>
+      <div style="flex: 4;">
+        <strong>Per:</strong>
+        <select id="denominator_selector"
+                style="padding: 0.5rem; border: none; outline: none;"></select>
+      </div>
+      <div style="flex: 4;">
+        <strong>For:</strong>
+        <select id="consumer_selector"
+                style="padding: 0.5rem; border: none; outline: none;"></select>
+      </div>
     </div>
-  </div>
-  <div style="padding: 0.5rem 0;">
-    <strong>Food filter:</strong>
-    <input id="food_filter" style="margin-left: 1rem; width: 25rem;">
-  </div>
-  <table id="data_table">
-  </table>
-  <div style="display: flex; align-items: baseline; justify-content: space-between;">
-    <div>Food nutrient data is provided by <i>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</i></div>
-    <div id="page_controls"
-         style="display: flex; align-items: baseline;">
-      <button disabled id="prev_page">Prev</button>
-      <div id="page_number">1</div>
-      <button id="next_page">Next</button>
+    <div style="padding: 0.5rem 0;">
+      <strong>Food filter:</strong>
+      <input id="food_filter" style="margin-left: 1rem; width: 25rem;">
     </div>
-  </div>
+    <table id="data_table">
+    </table>
+    <div style="display: flex; align-items: baseline; justify-content: space-between;">
+      <div>Food nutrient data is provided by <i>U.S. Department of Agriculture, Agricultural Research Service. FoodData Central, 2019. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a>.</i></div>
+      <div id="page_controls"
+           style="display: flex; align-items: baseline;">
+        <button disabled id="prev_page">Prev</button>
+        <div id="page_number">1</div>
+        <button id="next_page">Next</button>
+      </div>
+    </div>
+    <div id="menu_page" class="page">
+      <i id="close-menu-button" class="material-icons"
+         style="cursor: default; padding: 0.5rem;">close</i>
+      <nav style="text-align: center">
+        <div id="to_nutrient_search_page" class="navlink nav-item">Nutrient search</div>
+        <div id="to_about_page" class="navlink nav-item">About</div>
+      </nav>
+
+    </div>
+    <div id="settings_page" class="page">
+      Settings page
+    </div>
 </body>
 </html>
