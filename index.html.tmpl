@@ -98,7 +98,7 @@
 
       denominator_selector.addEventListener("change", event => {
         window.pageIndex = 0
-        rerender()
+        renderTableAndPagination()
       })
     }
 
@@ -113,7 +113,7 @@
 
       consumer_selector.addEventListener("change", event => {
         window.pageIndex = 0
-        rerender()
+        renderTableAndPagination()
       })
     }
 
@@ -163,7 +163,7 @@
 
       nutrient_selector.addEventListener("change", event => {
         window.pageIndex = 0
-        rerender()
+        renderTableAndPagination()
       })
     }
 
@@ -187,7 +187,7 @@
         input.id = category.id
         input.addEventListener("change", event => {
           window.pageIndex = 0
-          rerender()
+          renderTableAndPagination()
         })
         label.appendChild(input)
 
@@ -199,9 +199,9 @@
     }
 
     function percent_completion(daily_dose, food_dose) {
-      const rdi_unit = daily_dose.unit
+      const rdi_unit = daily_dose.unit.toLowerCase()
       const rdi_value = daily_dose.amount
-      const food_unit = food_dose.unit
+      const food_unit = food_dose.unit.toLowerCase()
       const food_value = food_dose.amount
 
       const conversions = {
@@ -212,17 +212,21 @@
         },
         'mg': {
           'mg': 1,
+          'mcg': 1000,
         },
         'ug': {
           'mcg': 1,
+        },
+        'iu': {
+          'iu': 1,
         }
+      }
 
+      if ((!(food_unit in conversions)) || (!(rdi_unit in conversions[food_unit]))) {
+        throw Error(`Unsupported unit conversion: ${food_unit} to ${rdi_unit}`)
       }
       const multiplier = conversions[food_unit.toLowerCase()][rdi_unit.toLowerCase()]
-      if (multiplier)
-        return food_value * multiplier * 100 / rdi_value
-      console.log({daily_dose, food_dose})
-      throw Error('Unsupported unit conversion')
+      return food_value * multiplier * 100 / rdi_value
     }
 
     function configureTableHeader(has_dri) {
@@ -252,7 +256,7 @@
       document.getElementById('data_table').appendChild(thead)
     }
 
-    function configureDataTable() {
+    function renderTable() {
       const data_table = document.getElementById("data_table")
       data_table.innerText = ''
 
@@ -261,7 +265,7 @@
       const nutrient = document.getElementById("nutrient_selector").value
       let daily_dose = consumer_dri[nutrient]
 
-      configureTableHeader(!!daily_dose)
+      configureTableHeader(/*has_dri=*/!!daily_dose)
 
       const food_categories = document.getElementById("categories_selector")
       const selectors = food_categories.getElementsByTagName("input")
@@ -305,8 +309,6 @@
         filteredData.length / window.pageSize :
         (Math.floor(filteredData.length / window.pageSize) + 1)
 
-      let amount_units = ''
-
       for (let [j, row] of filteredData.entries()) {
         if (j < pageIndex * window.pageSize) continue;
         if (j === (pageIndex + 1) * window.pageSize) break;
@@ -326,7 +328,7 @@
         } else if (denominator === DENOMINATOR_FAT) {
           nutrient_amount = row[7]
         }
-        const food_unit = row[4].toLowerCase()
+        const food_unit = row[4] === 'IU' ? row[4] : row[4].toLowerCase()
         td = document.createElement("td")
         td.style.textAlign = 'right'
         td.innerText = `${nutrient_amount}${food_unit}`
@@ -351,9 +353,8 @@
       return num_pages
     }
 
-    function rerender() {
-      const num_pages = configureDataTable()
-
+    function renderTableAndPagination() {
+      const num_pages = renderTable()
       let pageNumber = document.getElementById("page_number")
       pageNumber.innerText = `${window.pageIndex + 1} / ${num_pages}`
     }
@@ -365,7 +366,7 @@
         if (window.pageIndex === 0) {
           prevBtn.disabled = true
         }
-        rerender()
+        renderTableAndPagination()
       })
 
       let nextBtn = document.getElementById("next_page")
@@ -375,14 +376,14 @@
           prevBtn.disabled = false
         }
         window.pageIndex++
-        rerender()
+        renderTableAndPagination()
       })
     }
 
     function configureFoodFilter() {
       let filter = document.getElementById("food_filter")
       filter.addEventListener("keyup", event => {
-        rerender()
+        renderTableAndPagination()
       })
     }
 
@@ -421,7 +422,6 @@
     function navigate(to) {
       const activePages = document.getElementsByClassName('page')
       if (activePages.length !== 1) {
-        console.log(activePages)
         throw Error('Invalid state: not a single active page')
       }
       const activePage = activePages[0]
@@ -457,7 +457,7 @@
       configurePagination()
       configureFoodFilter()
       configureNavigation()
-      rerender()
+      renderTableAndPagination()
     })
 
   </script>
