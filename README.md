@@ -8,7 +8,7 @@ python3 generate.py
 # How to run locally
 
 ```
-bash start.sh
+cd public && python3 -m http.server
 ```
 
 # References
