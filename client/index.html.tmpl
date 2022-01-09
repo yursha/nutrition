@@ -318,6 +318,7 @@
         const food_name = row[0]
         let td = document.createElement("td")
         td.innerText = food_name
+        td.title = "food_id=" + row[8]
         tr.appendChild(td)
 
         let nutrient_amount

@@ -14,7 +14,8 @@ c.execute("""
          n.unit_name nutrient_unit,
          fn.amount nutrient_amount_per_100g,
          (fn.amount * 100 / energy.amount) nutrient_amount_per_100kcal,
-         (fn.amount / fat.amount) nutrient_amount_per_1gfat
+         (fn.amount / fat.amount) nutrient_amount_per_1gfat,
+         f.fdc_id food_id
     FROM food_nutrient fn
       JOIN nutrient n ON fn.nutrient_id = n.id
       JOIN food f ON f.fdc_id = fn.fdc_id
