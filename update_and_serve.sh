@@ -1,11 +1,4 @@
 set -e
 
-REPO_ROOT="$(pwd)"
-
-echo "Repository root is $REPO_ROOT"
-
-cd $REPO_ROOT/database
-python3 dump.py
-cd $REPO_ROOT/client
-python3 generate.py
+bash build.sh
 python3 -m http.server -d "$REPO_ROOT/client/public"
