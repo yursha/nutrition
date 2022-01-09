@@ -1,14 +1,16 @@
 # How to build
 
 ```
+cd $REPO_ROOT/database
 python3 dump.py
+cd $REPO_ROOT/client
 python3 generate.py
 ```
 
 # How to run locally
 
 ```
-cd public && python3 -m http.server
+cd $REPO_ROOT/public && python3 -m http.server
 ```
 
 # References
