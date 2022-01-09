@@ -36,5 +36,7 @@ data = json.dumps({'nutrients': nutrients, 'dri': dri})
 
 con.close()
 
+print('Dumping to JSON file')
 with open('data.json', 'w') as output:
   output.write(data)
+  print('JSON file done')

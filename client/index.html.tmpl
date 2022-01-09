@@ -24,6 +24,9 @@
     th {
       background-color: beige;
     }
+    td.selected_food {
+      background-color: yellow;
+    }
     input {
       padding: 0.5rem 0.25rem;
     }
@@ -316,15 +319,25 @@
 
         let tr = document.createElement("tr")
 
-        const food_name = row[0]
-        let td = document.createElement("td")
-        td.innerText = food_name
-        td.title = "food_id=" + row[8]
-        td.addEventListener("click", event => {
-          console.log(row[8] + " clicked")
-        })
+        {
+          const food_name = row[0]
+          let td = document.createElement("td")
+          td.innerText = food_name
+          let food_id = row[8]
+          td.title = "food_id=" + food_id
+          td.addEventListener("click", event => {
+            if (window.SELECTED_FOODS.has(food_id)) {
+              window.SELECTED_FOODS.delete(food_id)
+              td.classList.remove('selected_food')
+            } else {
+              window.SELECTED_FOODS.add(food_id)
+              td.classList.add('selected_food')
+            }
+            console.log(new Array(...window.SELECTED_FOODS).join(','))
+          })
 
-        tr.appendChild(td)
+          tr.appendChild(td)
+        }
 
         let nutrient_amount
         if (denominator === DENOMINATOR_WEIGHT) {
@@ -335,24 +348,31 @@
           nutrient_amount = row[7]
         }
         const food_unit = row[4] === 'IU' ? row[4] : row[4].toLowerCase()
-        td = document.createElement("td")
-        td.style.textAlign = 'right'
-        td.innerText = `${nutrient_amount}${food_unit}`
-        tr.appendChild(td)
 
-        if (daily_dose) {
+        {
           let td = document.createElement("td")
           td.style.textAlign = 'right'
-          td.innerText = `${daily_dose.amount}${daily_dose.unit}`
+          td.innerText = `${nutrient_amount}${food_unit}`
           tr.appendChild(td)
+        }
 
-          td = document.createElement("td")
-          td.style.textAlign = 'right'
-          const percent = percent_completion(
-            daily_dose, {amount: nutrient_amount, unit: food_unit}
-          )
-          td.innerText = percent.toFixed(1)
-          tr.appendChild(td)
+        if (daily_dose) {
+          {
+            let td = document.createElement("td")
+            td.style.textAlign = 'right'
+            td.innerText = `${daily_dose.amount}${daily_dose.unit}`
+            tr.appendChild(td)
+          }
+
+          {
+            let td = document.createElement("td")
+            td.style.textAlign = 'right'
+            const percent = percent_completion(
+              daily_dose, {amount: nutrient_amount, unit: food_unit}
+            )
+            td.innerText = percent.toFixed(1)
+            tr.appendChild(td)
+          }
         }
         tbody.appendChild(tr)
       }
@@ -457,6 +477,7 @@
       window.addEventListener('popstate', e => {
         console.log('popstate fired')
       })
+      window.SELECTED_FOODS = new Set()
       configureDri()
       configureCategoriesSelector()
       configureDenominatorSelector()

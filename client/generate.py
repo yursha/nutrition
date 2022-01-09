@@ -1,3 +1,4 @@
+print('Generating html from template')
 with open('../database/data.json', 'r') as data_file:
   data = data_file.read()
   with open('index.html.tmpl', 'r') as f:
