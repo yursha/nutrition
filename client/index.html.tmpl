@@ -320,6 +320,10 @@
         let td = document.createElement("td")
         td.innerText = food_name
         td.title = "food_id=" + row[8]
+        td.addEventListener("click", event => {
+          console.log(row[8] + " clicked")
+        })
+
         tr.appendChild(td)
 
         let nutrient_amount
