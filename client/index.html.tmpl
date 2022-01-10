@@ -325,6 +325,9 @@
           td.innerText = food_name
           let food_id = row[8]
           td.title = "food_id=" + food_id
+          if (window.SELECTED_FOODS.has(food_id)) {
+            td.classList.add('selected_food')
+          }
           td.addEventListener("click", event => {
             if (window.SELECTED_FOODS.has(food_id)) {
               window.SELECTED_FOODS.delete(food_id)
