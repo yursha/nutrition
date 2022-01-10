@@ -116,6 +116,7 @@
       }
 
       consumer_selector.addEventListener("change", event => {
+        setConsumerDailyDose()
         window.pageIndex = 0
         renderTableAndPagination()
       })
@@ -166,6 +167,7 @@
       nutrient_selector.appendChild(createOptionGroup("Other", other))
 
       nutrient_selector.addEventListener("change", event => {
+        setConsumerDailyDose()
         window.pageIndex = 0
         renderTableAndPagination()
       })
@@ -246,10 +248,6 @@
       header_row.appendChild(amount_th)
 
       if (has_dri) {
-        let dri_th = document.createElement('th')
-        dri_th.innerText = "DRI"
-        header_row.appendChild(dri_th)
-
         let percent_dri_th = document.createElement('th')
         percent_dri_th.innerText = "% DRI"
         header_row.appendChild(percent_dri_th)
@@ -263,6 +261,7 @@
     function renderTable() {
       const data_table = document.getElementById("data_table")
       data_table.innerText = ''
+
 
       const consumer = document.getElementById("consumer_selector").value
       const consumer_dri = window.DRI[consumer]
@@ -360,22 +359,13 @@
         }
 
         if (daily_dose) {
-          {
-            let td = document.createElement("td")
-            td.style.textAlign = 'right'
-            td.innerText = `${daily_dose.amount}${daily_dose.unit}`
-            tr.appendChild(td)
-          }
-
-          {
-            let td = document.createElement("td")
-            td.style.textAlign = 'right'
-            const percent = percent_completion(
-              daily_dose, {amount: nutrient_amount, unit: food_unit}
-            )
-            td.innerText = percent.toFixed(1)
-            tr.appendChild(td)
-          }
+          let td = document.createElement("td")
+          td.style.textAlign = 'right'
+          const percent = percent_completion(
+            daily_dose, {amount: nutrient_amount, unit: food_unit}
+          )
+          td.innerText = percent.toFixed(1)
+          tr.appendChild(td)
         }
         tbody.appendChild(tr)
       }
@@ -416,6 +406,16 @@
       })
     }
 
+    function setConsumerDailyDose() {
+      const consumer = document.getElementById("consumer_selector").value
+      const consumer_dri = window.DRI[consumer]
+      const nutrient = document.getElementById("nutrient_selector").value
+      let daily_dose = consumer_dri[nutrient]
+      const consumer_dri_display = document.getElementById("consumer_dri")
+      consumer_dri_display.innerText = `${daily_dose.amount}${daily_dose.unit}`
+    }
+
+
     function configureDri() {
       let DRI = {}
       for (let row of window.data.dri) {
@@ -446,6 +446,7 @@
       }
 
       configureNutrientSelector(nutrient_groups)
+      setConsumerDailyDose()
     }
 
     function navigate(to) {
@@ -520,10 +521,15 @@
         <select id="denominator_selector"
                 style="padding: 0.5rem; border: none; outline: none;"></select>
       </div>
-      <div style="flex: 4;">
+      <div style="flex: 3;">
         <strong>For:</strong>
         <select id="consumer_selector"
                 style="padding: 0.5rem; border: none; outline: none;"></select>
+      </div>
+      <div style="flex: 1;">
+        <strong>DRI:</strong>
+        <span id="consumer_dri"
+                style="padding: 0.5rem; border: none; outline: none;"></span>
       </div>
     </div>
     <div style="padding: 0.5rem 0;">
